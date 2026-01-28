@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Relationship Network</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+        }
+        .header {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #58a6ff, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #network-container {
+            width: 100%;
+            height: calc(100vh - 80px);
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(30, 30, 50, 0.95);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            max-width: 320px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+        }
+        .tooltip h3 {
+            color: #58a6ff;
+            margin-bottom: 8px;
+        }
+        .tooltip p {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #a0a0a0;
+            margin-bottom: 8px;
+        }
+        .tooltip .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .tooltip .keyword {
+            background: rgba(163, 113, 247, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            color: #c9b1ff;
+        }
+        .node {
+            cursor: grab;
+        }
+        .node:active {
+            cursor: grabbing;
+        }
+        .link {
+            stroke: rgba(88, 166, 255, 0.3);
+            stroke-opacity: 0.6;
+        }
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(30, 30, 50, 0.8);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔗 Topic Relationship Network</h1>
+    </div>
+    <div id="network-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="instructions">
+        🖱️ Drag nodes to rearrange | Hover for details
+    </div>
+    <script>
+        const nodes = [{"id": "topic_004", "name": "Vision Transformer (ViT)", "score": 0.36199254990413465, "entity_count": 28, "keywords": ["person", "metric", "architecture", "dataset", "method"], "description": "This topic cluster focuses on the Vision Transformer (ViT) architecture, a significant advancement in computer vision that leverages transformer model..."}, {"id": "topic_003", "name": "GPT-3", "score": 0.35359470095384105, "entity_count": 36, "keywords": ["metric", "task", "Metric", "Model", "dataset"], "description": "This topic cluster focuses on the advancements and applications of the GPT-3 model and its counterparts, such as LLaMA-I and Gopher, in natural langua..."}, {"id": "topic_007", "name": "Transformer architecture", "score": 0.34326534062149905, "entity_count": 30, "keywords": ["task", "Model", "dataset", "architecture", "method"], "description": "This topic cluster focuses on the Transformer architecture and its various adaptations and applications in AI/ML research, highlighting key models suc..."}, {"id": "topic_005", "name": "CLIP", "score": 0.310658979984753, "entity_count": 23, "keywords": ["metric", "dataset", "field", "method", "people"], "description": "This topic cluster focuses on CLIP (Contrastive Language-Image Pretraining), a method developed by OpenAI that integrates few-shot and zero-shot learn..."}, {"id": "topic_009", "name": "Transformer", "score": 0.29164891794988573, "entity_count": 21, "keywords": ["metric", "dataset", "architecture", "method", "function"], "description": "This topic cluster represents the advancements and methodologies surrounding the Transformer architecture in AI/ML research, highlighting key entities..."}, {"id": "topic_008", "name": "ViT", "score": 0.24041607949648075, "entity_count": 13, "keywords": ["Model", "architecture", "method", "hyperparameter", "model variant"], "description": "The topic cluster \"ViT\" encompasses various models and architectures related to Vision Transformers (ViTs), including notable variants such as ViT-H/1..."}, {"id": "topic_001", "name": "PaLM", "score": 0.2240976083346769, "entity_count": 17, "keywords": ["benchmark", "dataset", "embedding", "Language Model", "Benchmark"], "description": "The topic cluster \"PaLM\" encompasses advancements in large language models developed by Google Research, particularly focusing on the PaLM model and i..."}, {"id": "topic_006", "name": "ResNet-101", "score": 0.20354085910581038, "entity_count": 15, "keywords": ["metric", "Metric", "architecture", "method", "optimizer"], "description": "This topic cluster represents a focused exploration of advanced neural network architectures and optimization methods in AI/ML research, with ResNet-1..."}, {"id": "topic_011", "name": "LLaVA", "score": 0.18503104457261166, "entity_count": 17, "keywords": ["metric", "benchmark", "dataset", "model", "data"], "description": "The topic cluster \"LLaVA\" encompasses research on advanced language and vision models, particularly focusing on the LLaVA model and its instruction-fo..."}, {"id": "topic_000", "name": "Jakob Uszkoreit", "score": 0.16018982312667163, "entity_count": 9, "keywords": ["person", "organization"], "description": "This topic cluster centers around Jakob Uszkoreit and his contributions to the development of transformer architectures within AI and machine learning..."}, {"id": "topic_002", "name": "Attention Function", "score": 0.1403898580159801, "entity_count": 9, "keywords": ["Architecture", "Method"], "description": "The topic cluster \"Attention Function\" encompasses key components and methodologies related to the attention mechanism in neural network architectures..."}, {"id": "topic_010", "name": "TPU v4", "score": 0.13123155302056516, "entity_count": 3, "keywords": ["system", "hardware", "software"], "description": "The topic cluster on TPU v4 encompasses advancements in Tensor Processing Units (TPUs), specifically the fourth generation, and their integration with..."}, {"id": "topic_013", "name": "query vector", "score": 0.11973104692099376, "entity_count": 4, "keywords": ["concept", "parameter"], "description": "The topic cluster centered around \"query vector\" pertains to the mechanisms used in attention-based models, particularly within the Transformer archit..."}, {"id": "topic_012", "name": "Microsoft Research Asia", "score": 0.11832449616814539, "entity_count": 9, "keywords": ["person", "organization"], "description": "This topic cluster centers on Microsoft Research Asia, highlighting key contributors such as Ze Liu, Yutong Lin, and Yue Cao, who are associated with ..."}];
+        const links = [{"source": "topic_004", "target": "topic_008", "similarity": 0.10714285714285714}, {"source": "topic_004", "target": "topic_006", "similarity": 0.10714285714285714}, {"source": "topic_004", "target": "topic_007", "similarity": 0.07142857142857142}, {"source": "topic_004", "target": "topic_005", "similarity": 0.03571428571428571}, {"source": "topic_004", "target": "topic_009", "similarity": 0.03571428571428571}, {"source": "topic_003", "target": "topic_001", "similarity": 0.16666666666666666}, {"source": "topic_003", "target": "topic_005", "similarity": 0.1111111111111111}, {"source": "topic_003", "target": "topic_007", "similarity": 0.1111111111111111}, {"source": "topic_003", "target": "topic_011", "similarity": 0.05555555555555555}, {"source": "topic_007", "target": "topic_003", "similarity": 0.13333333333333333}, {"source": "topic_007", "target": "topic_004", "similarity": 0.06666666666666667}, {"source": "topic_007", "target": "topic_009", "similarity": 0.06666666666666667}, {"source": "topic_007", "target": "topic_006", "similarity": 0.03333333333333333}, {"source": "topic_007", "target": "topic_008", "similarity": 0.03333333333333333}, {"source": "topic_005", "target": "topic_003", "similarity": 0.17391304347826086}, {"source": "topic_005", "target": "topic_004", "similarity": 0.043478260869565216}, {"source": "topic_005", "target": "topic_011", "similarity": 0.043478260869565216}, {"source": "topic_005", "target": "topic_006", "similarity": 0.043478260869565216}, {"source": "topic_009", "target": "topic_007", "similarity": 0.09523809523809523}, {"source": "topic_009", "target": "topic_006", "similarity": 0.047619047619047616}, {"source": "topic_009", "target": "topic_004", "similarity": 0.047619047619047616}, {"source": "topic_009", "target": "topic_001", "similarity": 0.047619047619047616}, {"source": "topic_008", "target": "topic_004", "similarity": 0.23076923076923078}, {"source": "topic_008", "target": "topic_007", "similarity": 0.07692307692307693}, {"source": "topic_008", "target": "topic_006", "similarity": 0.07692307692307693}, {"source": "topic_001", "target": "topic_003", "similarity": 0.35294117647058826}, {"source": "topic_001", "target": "topic_004", "similarity": 0.058823529411764705}, {"source": "topic_001", "target": "topic_009", "similarity": 0.058823529411764705}, {"source": "topic_006", "target": "topic_004", "similarity": 0.2}, {"source": "topic_006", "target": "topic_008", "similarity": 0.06666666666666667}, {"source": "topic_006", "target": "topic_009", "similarity": 0.06666666666666667}, {"source": "topic_006", "target": "topic_005", "similarity": 0.06666666666666667}, {"source": "topic_006", "target": "topic_007", "similarity": 0.06666666666666667}, {"source": "topic_011", "target": "topic_003", "similarity": 0.11764705882352941}, {"source": "topic_011", "target": "topic_005", "similarity": 0.058823529411764705}, {"source": "topic_000", "target": "topic_004", "similarity": 0.1111111111111111}];
+        
+        const container = document.getElementById('network-container');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        
+        const svg = d3.select('#network-container')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
+        
+        const simulation = d3.forceSimulation(nodes)
+            .force('link', d3.forceLink(links).id(d => d.id).distance(150))
+            .force('charge', d3.forceManyBody().strength(-400))
+            .force('center', d3.forceCenter(width / 2, height / 2))
+            .force('collision', d3.forceCollide().radius(50));
+        
+        const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+        
+        const link = svg.selectAll('.link')
+            .data(links)
+            .join('line')
+            .attr('class', 'link')
+            .attr('stroke-width', d => d.similarity * 5 + 1);
+        
+        const node = svg.selectAll('.node')
+            .data(nodes)
+            .join('g')
+            .attr('class', 'node')
+            .call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+        
+        node.append('circle')
+            .attr('r', d => 15 + d.score * 30)
+            .attr('fill', (d, i) => colorScale(i))
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 2)
+            .on('mouseover', function(event, d) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+                    <h3>${d.name}</h3>
+                    <p><strong>Score:</strong> ${d.score.toFixed(3)} | <strong>Entities:</strong> ${d.entity_count}</p>
+                    <p>${d.description}</p>
+                    <div class="keywords">
+                        ${d.keywords.map(k => `<span class="keyword">${k}</span>`).join('')}
+                    </div>
+                `;
+                tooltip.style.opacity = 1;
+                tooltip.style.left = (event.pageX + 15) + 'px';
+                tooltip.style.top = (event.pageY - 10) + 'px';
+            })
+            .on('mouseout', function() {
+                document.getElementById('tooltip').style.opacity = 0;
+            });
+        
+        node.append('text')
+            .text(d => d.name.length > 15 ? d.name.substring(0, 15) + '...' : d.name)
+            .attr('text-anchor', 'middle')
+            .attr('dy', d => 25 + d.score * 30)
+            .attr('fill', '#e0e0e0')
+            .attr('font-size', '11px');
+        
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+            
+            node.attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+        
+        function dragstarted(event) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            event.subject.fx = event.subject.x;
+            event.subject.fy = event.subject.y;
+        }
+        
+        function dragged(event) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
+        }
+        
+        function dragended(event) {
+            if (!event.active) simulation.alphaTarget(0);
+            event.subject.fx = null;
+            event.subject.fy = null;
+        }
+    </script>
+</body>
+</html>

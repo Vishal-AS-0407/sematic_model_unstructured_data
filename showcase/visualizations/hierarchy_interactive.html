@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchy Tree - Semantic Model</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+        }
+        .header {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: flex;
+            gap: 30px;
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+        .header .stats span {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        #tree-container {
+            width: 100%;
+            height: calc(100vh - 100px);
+            overflow: auto;
+        }
+        .node circle {
+            stroke-width: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .node circle:hover {
+            stroke-width: 4px;
+            filter: brightness(1.3);
+        }
+        .node text {
+            font-size: 12px;
+            fill: #e8e8e8;
+            pointer-events: none;
+        }
+        .link {
+            fill: none;
+            stroke: rgba(255,255,255,0.2);
+            stroke-width: 1.5px;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(20, 20, 40, 0.95);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 15px;
+            max-width: 350px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+        }
+        .tooltip h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .tooltip p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #c0c0c0;
+            margin-bottom: 10px;
+        }
+        .tooltip .entities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .tooltip .entity-tag {
+            background: rgba(123, 44, 191, 0.3);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #e0b0ff;
+        }
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(20, 20, 40, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌳 Hierarchical Semantic Model</h1>
+        <div class="stats">
+            <div>Total Levels: <span>5</span></div>
+            <div>Total Nodes: <span>27</span></div>
+            <div>Leaf Topics: <span>14</span></div>
+        </div>
+    </div>
+    <div id="tree-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="legend">
+        <div class="legend-item"><div class="legend-color" style="background: #ff6b6b;"></div> Root</div>
+        <div class="legend-item"><div class="legend-color" style="background: #4ecdc4;"></div> Branch</div>
+        <div class="legend-item"><div class="legend-color" style="background: #45b7d1;"></div> Leaf</div>
+    </div>
+    <script>
+        const data = {"name": "Knowledge Base Root", "id": "root", "type": "root", "level": 4, "entity_count": 15, "summary": "This knowledge base explores advancements in transformer models and their applications in vision tasks, highlighting key contributions from researchers like Jakob Uszkoreit and Ashish Vaswani. It disc...", "key_entities": ["TPU v4", "Chinchilla", "CIFAR-10", "Niki Parmar", "query vector"], "children": [{"name": "Transformer & Vision", "id": "cluster_L3_0", "type": "branch", "level": 3, "entity_count": 13, "summary": "The common theme among these topics revolves around advancements in machine learning architectures, particularly the use of Transformers in vision tasks and the optimization of training processes thro...", "key_entities": ["TPU v4", "Chinchilla", "CIFAR-10", "query vector", "Multi-Head Attention"], "children": [{"name": "Transformer & Vision", "id": "cluster_L2_0", "type": "branch", "level": 2, "entity_count": 34, "summary": "The common theme among these topics is the advancement of transformer-based architectures and models in natural language processing and computer vision, highlighting innovations such as multi-head att...", "key_entities": ["Chinchilla", "CIFAR-10", "query vector", "Multi-Head Attention", "Decoder"], "children": [{"name": "Transformer & Vision", "id": "cluster_L1_0", "type": "branch", "level": 1, "entity_count": 30, "summary": "The common theme among these topics is the application and evolution of the Transformer architecture, particularly in the context of computer vision through models like the Vision Transformer (ViT), w...", "key_entities": ["CIFAR-10", "Multi-Head Attention", "Decoder", "Positional Encoding", "EfficientNet"], "children": [{"name": "Vision Transformer (ViT)", "id": "topic_004", "type": "leaf", "level": 0, "entity_count": 28, "summary": "Cluster of related concepts including Vision Transformer (ViT), ImageNet-21k, ImageNet and 2 more", "key_entities": ["Vision Transformer (ViT)", "ImageNet-21k", "ImageNet", "fine-tuning", "CIFAR-10"]}, {"name": "Transformer architecture", "id": "topic_007", "type": "leaf", "level": 0, "entity_count": 30, "summary": "Cluster of related concepts including Transformer architecture, Longformer, self-attention and 2 more", "key_entities": ["Transformer architecture", "Longformer", "self-attention", "Vaswani et al. (2017)", "TriviaQA"]}, {"name": "Transformer", "id": "topic_009", "type": "leaf", "level": 0, "entity_count": 21, "summary": "Cluster of related concepts including Transformer, Transformer-XL, Positional Encoding and 2 more", "key_entities": ["Transformer", "Transformer-XL", "Positional Encoding", "BLEU", "Perplexity"]}, {"name": "ViT", "id": "topic_008", "type": "leaf", "level": 0, "entity_count": 13, "summary": "Cluster of related concepts including ViT, ViT-H/14, Swin-T and 2 more", "key_entities": ["ViT", "ViT-H/14", "Swin-T", "BiT", "Noisy Student"]}, {"name": "ResNet-101", "id": "topic_006", "type": "leaf", "level": 0, "entity_count": 15, "summary": "Cluster of related concepts including ResNet-101, Swin Transformer, EfficientNet and 2 more", "key_entities": ["ResNet-101", "Swin Transformer", "EfficientNet", "AdamW", "FLOPs"]}, {"name": "Attention Function", "id": "topic_002", "type": "leaf", "level": 0, "entity_count": 9, "summary": "Cluster of related concepts including Attention Function, Multi-Head Attention, Decoder and 2 more", "key_entities": ["Attention Function", "Multi-Head Attention", "Decoder", "Encoder", "Residual Connection"]}]}, {"name": "GPT & PaLM", "id": "cluster_L1_1", "type": "branch", "level": 1, "entity_count": 15, "summary": "The topics of GPT-3, PaLM, and LLaVA revolve around advanced language models and their development, focusing on instruction-following capabilities and leveraging diverse datasets like Common Crawl and...", "key_entities": ["Chinchilla", "LLaVA", "GPT-3", "Wikipedia", "LMM"], "children": [{"name": "GPT-3", "id": "topic_003", "type": "leaf", "level": 0, "entity_count": 36, "summary": "Cluster of related concepts including GPT-3, LLaMA-I, Common Crawl and 2 more", "key_entities": ["GPT-3", "LLaMA-I", "Common Crawl", "Wikipedia", "Natural Questions"]}, {"name": "PaLM", "id": "topic_001", "type": "leaf", "level": 0, "entity_count": 17, "summary": "Cluster of related concepts including PaLM, Google Research, Chinchilla and 2 more", "key_entities": ["PaLM", "Google Research", "Chinchilla", "SwiGLU", "WinoGender"]}, {"name": "LLaVA", "id": "topic_011", "type": "leaf", "level": 0, "entity_count": 17, "summary": "Cluster of related concepts including LLaVA, LMM, OpenFlamingo and 2 more", "key_entities": ["LLaVA", "LMM", "OpenFlamingo", "Vicuna", "instruction-following capability"]}]}, {"name": "CLIP", "id": "cluster_L1_5", "type": "branch", "level": 1, "entity_count": 5, "summary": "The common theme among these topics is the use of CLIP (Contrastive Language-Image Pretraining) by OpenAI, which leverages few-shot learning and meta-learning techniques to enable in-context learning,...", "key_entities": ["in-context learning", "meta-learning", "OpenAI", "few-shot learning", "CLIP"], "children": [{"name": "CLIP", "id": "topic_005", "type": "leaf", "level": 0, "entity_count": 23, "summary": "Cluster of related concepts including CLIP, few-shot learning, OpenAI and 2 more", "key_entities": ["CLIP", "few-shot learning", "OpenAI", "meta-learning", "in-context learning"]}]}, {"name": "query & vector", "id": "cluster_L1_4", "type": "branch", "level": 1, "entity_count": 4, "summary": "The common theme among these topics is the representation of data in vector form, where a query vector (u) is used to retrieve relevant information by comparing it with key vectors (v) in various mach...", "key_entities": ["u", "key vector", "v", "query vector"], "children": [{"name": "query vector", "id": "topic_013", "type": "leaf", "level": 0, "entity_count": 4, "summary": "Cluster of related concepts including query vector, key vector, u and 1 more", "key_entities": ["query vector", "key vector", "u", "v"]}]}, {"name": "Microsoft & Research", "id": "cluster_L1_2", "type": "branch", "level": 1, "entity_count": 5, "summary": "The common theme among these topics is the innovative research and contributions of Microsoft Research Asia, particularly through the work of researchers such as Ze Liu, Yutong Lin, Yue Cao, and Han H...", "key_entities": ["Microsoft Research Asia", "Yutong Lin", "Han Hu", "Yue Cao", "Ze Liu"], "children": [{"name": "Microsoft Research Asia", "id": "topic_012", "type": "leaf", "level": 0, "entity_count": 9, "summary": "Cluster of related concepts including Microsoft Research Asia, Ze Liu, Yutong Lin and 2 more", "key_entities": ["Microsoft Research Asia", "Ze Liu", "Yutong Lin", "Yue Cao", "Han Hu"]}]}]}, {"name": "TPU", "id": "cluster_L2_2", "type": "branch", "level": 2, "entity_count": 3, "summary": "The common theme among TPU v4, JAX/XLA, and the Pathways system is their integration in advancing machine learning performance and efficiency, with TPU v4 providing powerful hardware acceleration, JAX...", "key_entities": ["TPU v4", "JAX/XLA", "Pathways system"], "children": [{"name": "TPU", "id": "cluster_L1_6", "type": "branch", "level": 1, "entity_count": 3, "summary": "The common theme among TPU v4, JAX/XLA, and the Pathways system is the advancement of high-performance machine learning infrastructure, where TPU v4 serves as a powerful hardware accelerator, JAX/XLA ...", "key_entities": ["TPU v4", "JAX/XLA", "Pathways system"], "children": [{"name": "TPU v4", "id": "topic_010", "type": "leaf", "level": 0, "entity_count": 3, "summary": "Cluster of related concepts including TPU v4, JAX/XLA, Pathways system", "key_entities": ["TPU v4", "JAX/XLA", "Pathways system"]}]}]}]}, {"name": "Jakob & Uszkoreit", "id": "cluster_L3_1", "type": "branch", "level": 3, "entity_count": 5, "summary": "The common theme among Jakob Uszkoreit, Niki Parmar, Ashish Vaswani, Noam Shazeer, and Google Brain is their pivotal contributions to advancements in natural language processing and machine learning, ...", "key_entities": ["Niki Parmar", "Ashish Vaswani", "Google Brain", "Noam Shazeer", "Jakob Uszkoreit"], "children": [{"name": "Jakob & Uszkoreit", "id": "cluster_L2_1", "type": "branch", "level": 2, "entity_count": 5, "summary": "The common theme among Jakob Uszkoreit, Niki Parmar, Ashish Vaswani, Noam Shazeer, and Google Brain is their significant contributions to advancements in natural language processing and machine learni...", "key_entities": ["Niki Parmar", "Ashish Vaswani", "Google Brain", "Noam Shazeer", "Jakob Uszkoreit"], "children": [{"name": "Jakob & Uszkoreit", "id": "cluster_L1_3", "type": "branch", "level": 1, "entity_count": 5, "summary": "Jakob Uszkoreit is a prominent figure associated with Google Brain, contributing to advancements in artificial intelligence and natural language processing, particularly through collaborations with re...", "key_entities": ["Niki Parmar", "Ashish Vaswani", "Google Brain", "Noam Shazeer", "Jakob Uszkoreit"], "children": [{"name": "Jakob Uszkoreit", "id": "topic_000", "type": "leaf", "level": 0, "entity_count": 9, "summary": "Cluster of related concepts including Jakob Uszkoreit, Google Brain, Ashish Vaswani and 2 more", "key_entities": ["Jakob Uszkoreit", "Google Brain", "Ashish Vaswani", "Noam Shazeer", "Niki Parmar"]}]}]}]}]};
+        
+        const container = document.getElementById('tree-container');
+        const width = Math.max(1400, container.clientWidth);
+        const height = Math.max(800, container.clientHeight);
+        
+        const svg = d3.select('#tree-container')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
+            .append('g')
+            .attr('transform', 'translate(80, 40)');
+        
+        const tree = d3.tree().size([height - 100, width - 200]);
+        const root = d3.hierarchy(data);
+        tree(root);
+        
+        // Links
+        svg.selectAll('.link')
+            .data(root.links())
+            .join('path')
+            .attr('class', 'link')
+            .attr('d', d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x));
+        
+        // Nodes
+        const node = svg.selectAll('.node')
+            .data(root.descendants())
+            .join('g')
+            .attr('class', 'node')
+            .attr('transform', d => `translate(${d.y},${d.x})`);
+        
+        const getColor = (type) => {
+            if (type === 'root') return '#ff6b6b';
+            if (type === 'branch') return '#4ecdc4';
+            return '#45b7d1';
+        };
+        
+        node.append('circle')
+            .attr('r', d => 8 + d.data.entity_count / 5)
+            .attr('fill', d => getColor(d.data.type))
+            .attr('stroke', d => d3.color(getColor(d.data.type)).darker(0.5))
+            .on('mouseover', function(event, d) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+                    <h3>${d.data.name}</h3>
+                    <p><strong>Type:</strong> ${d.data.type} | <strong>Level:</strong> ${d.data.level} | <strong>Entities:</strong> ${d.data.entity_count}</p>
+                    <p>${d.data.summary}</p>
+                    <div class="entities">
+                        ${d.data.key_entities.map(e => `<span class="entity-tag">${e}</span>`).join('')}
+                    </div>
+                `;
+                tooltip.style.opacity = 1;
+                tooltip.style.left = (event.pageX + 15) + 'px';
+                tooltip.style.top = (event.pageY - 10) + 'px';
+            })
+            .on('mouseout', function() {
+                document.getElementById('tooltip').style.opacity = 0;
+            });
+        
+        node.append('text')
+            .attr('dy', 4)
+            .attr('x', d => d.children ? -12 : 12)
+            .attr('text-anchor', d => d.children ? 'end' : 'start')
+            .text(d => d.data.name.length > 20 ? d.data.name.substring(0, 20) + '...' : d.data.name);
+    </script>
+</body>
+</html>

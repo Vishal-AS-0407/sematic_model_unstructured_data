@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-12-11T00:59:01.101977",
+  "phases": {
+    "phase1": {
+      "edges_added": 518,
+      "noise_rescued": 26,
+      "summaries_generated": 14,
+      "time_seconds": 68.8297848701477
+    },
+    "phase2": {
+      "retrieval_tests": [
+        {
+          "query": "How does Vision Transformer work?",
+          "entities": 10,
+          "relationships": 15
+        },
+        {
+          "query": "What is self-attention?",
+          "entities": 10,
+          "relationships": 15
+        },
+        {
+          "query": "GPT-3 training data",
+          "entities": 10,
+          "relationships": 14
+        }
+      ],
+      "time_seconds": 18.4650616645813
+    },
+    "phase3": {
+      "generic_before": 822,
+      "generic_after": 349,
+      "typed_count": 473,
+      "relation_distribution": {
+        "uses": 222,
+        "related_to": 112,
+        "trained_on": 55,
+        "part_of": 13,
+        "compared_to": 7,
+        "evaluated_on": 100,
+        "authored_by": 68,
+        "based_on": 1,
+        "semantically_related": 237,
+        "applied_to": 7
+      },
+      "time_seconds": 8.470478057861328
+    }
+  },
+  "metrics": {
+    "baseline": {
+      "nodes": 609,
+      "edges": 304,
+      "avg_degree": 0.9983579638752053,
+      "topics": 14,
+      "modularity": 0.786853880385349
+    },
+    "final": {
+      "nodes": 609,
+      "edges": 822,
+      "avg_degree": 2.6995073891625614,
+      "typed_relations": 10,
+      "coverage": 0.4269293924466338
+    }
+  },
+  "total_time_seconds": 95.87700152397156
+}

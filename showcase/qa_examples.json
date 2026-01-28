@@ -1,0 +1,1488 @@
+[
+  {
+    "question": "How does Vision Transformer (ViT) work?",
+    "timestamp": "2025-12-11T01:26:25.311260",
+    "entities": [
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.9823565209168447,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "ViT",
+        "score": 0.6259643141576954,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "GPT-3",
+        "score": 0.5560384555035958,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "ViT-Large",
+        "score": 0.5125052003690114,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "ViT-Base",
+        "score": 0.5122206096478811,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "ViT/DeiT",
+        "score": 0.4762850110857001,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "ImageNet-21k",
+        "score": 0.45783824622620867,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Transformer architecture",
+        "score": 0.4529266671066262,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Transformer",
+        "score": 0.43883069285732346,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Swin Transformer",
+        "score": 0.4321708472606827,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "ViT-Base",
+      "Vision Transformer (ViT)",
+      "ViT-Large",
+      "ViT",
+      "ViT/DeiT"
+    ],
+    "relationships": [
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "uses",
+        "target": "Transformer"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "ViT",
+        "relation": "uses",
+        "target": "Transformer architecture"
+      },
+      {
+        "source": "ViT",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "ViT",
+        "relation": "optimized_with",
+        "target": "weight decay"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "ViT-Large",
+        "relation": "is_based_on",
+        "target": "BERT"
+      },
+      {
+        "source": "ViT-Large",
+        "relation": "semantically_related",
+        "target": "ViT-B/32"
+      },
+      {
+        "source": "ViT-Large",
+        "relation": "semantically_related",
+        "target": "ViT-H/14"
+      },
+      {
+        "source": "ViT-Base",
+        "relation": "is_based_on",
+        "target": "BERT"
+      },
+      {
+        "source": "ViT-Base",
+        "relation": "semantically_related",
+        "target": "ViT-Large"
+      },
+      {
+        "source": "ViT-Base",
+        "relation": "semantically_related",
+        "target": "ViT-B/32"
+      },
+      {
+        "source": "ViT/DeiT",
+        "relation": "uses",
+        "target": "DeiT"
+      },
+      {
+        "source": "ViT/DeiT",
+        "relation": "uses",
+        "target": "hybrids"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "evaluated_on",
+        "target": "ILSVRC-2012 ImageNet"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "evaluated_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "uses",
+        "target": "pre-training"
+      },
+      {
+        "source": "Transformer architecture",
+        "relation": "is used in",
+        "target": "GPT-3"
+      },
+      {
+        "source": "Transformer",
+        "relation": "uses",
+        "target": "Attention Mechanism"
+      },
+      {
+        "source": "Transformer",
+        "relation": "improves",
+        "target": "BLEU"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-German"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "uses",
+        "target": "DetectoRS"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "uses",
+        "target": "SETR"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "is similar to",
+        "target": "ResNet-50"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **Vision Transformer (ViT)** (score: 0.98)\n   - A transformer-based model for image classification.\n2. **ViT** (score: 0.63)\n   - Vision Transformer, a model that applies transformer architecture to image classification.\n3. **GPT-3** (score: 0.56)\n   - A state-of-the-art language model that is competitive across many tasks.\n4. **ViT-Large** (score: 0.51)\n   - A Vision Transformer model variant with 24 layers and 307M parameters.\n5. **ViT-Base** (score: 0.51)\n   - A Vision Transformer model variant with 12 layers and 86M parameters.\n\n### Relationships\n- Vision Transformer (ViT) → *uses* → Transformer\n- Vision Transformer (ViT) → *trained_on* → ImageNet-21k\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- ViT → *uses* → Transformer architecture\n- ViT → *trained_on* → JFT-300M\n- ViT → *optimized_with* → weight decay\n- GPT-3 → *developed_by* → OpenAI\n- GPT-3 → *uses* → few-shot learning\n- GPT-3 → *applied_to* → translation\n- ViT-Large → *is_based_on* → BERT",
+    "llm_summary": "The Vision Transformer (ViT) operates by leveraging the Transformer architecture, which was originally designed for natural language processing tasks. ViT is trained on large datasets such as ImageNet-21k and JFT-300M, allowing it to effectively process and classify images by treating them as sequences of patches. Variants like ViT-Large and ViT-Base optimize performance through techniques such as weight decay, enhancing their ability to generalize across diverse visual tasks.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 27,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "What is self-attention mechanism in transformers?",
+    "timestamp": "2025-12-11T01:26:29.081685",
+    "entities": [
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.7055017507332814,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "self-attention",
+        "score": 0.5191690480479572,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer",
+        "score": 0.5029072237907035,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Attention Pattern",
+        "score": 0.4973708608351515,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer Encoder",
+        "score": 0.4948541614741282,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Attention",
+        "score": 0.46753070752414316,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer-XL",
+        "score": 0.45910828176419327,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Longformer",
+        "score": 0.45278174527506404,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Attention Heads",
+        "score": 0.4420682470062599,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Attention Function",
+        "score": 0.38170013839263156,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "Attention Pattern",
+      "Attention",
+      "Attention Heads",
+      "Transformer Encoder",
+      "self-attention"
+    ],
+    "relationships": [
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "self-attention",
+        "relation": "uses",
+        "target": "Swin Transformer"
+      },
+      {
+        "source": "Transformer",
+        "relation": "uses",
+        "target": "Attention Mechanism"
+      },
+      {
+        "source": "Transformer",
+        "relation": "improves",
+        "target": "BLEU"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-German"
+      },
+      {
+        "source": "Transformer Encoder",
+        "relation": "is_inspired_by",
+        "target": "Vaswani et al. (2017)"
+      },
+      {
+        "source": "Transformer Encoder",
+        "relation": "uses",
+        "target": "Longformer"
+      },
+      {
+        "source": "Transformer Encoder",
+        "relation": "uses",
+        "target": "visual encoder"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "improves",
+        "target": "long-term dependency"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "resolves",
+        "target": "context fragmentation"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "improves",
+        "target": "Perplexity"
+      },
+      {
+        "source": "Longformer",
+        "relation": "uses",
+        "target": "RoBERTa"
+      },
+      {
+        "source": "Longformer",
+        "relation": "trained_on",
+        "target": "text8"
+      },
+      {
+        "source": "Longformer",
+        "relation": "trained_on",
+        "target": "enwik8"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "uses",
+        "target": "v"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "uses",
+        "target": "u"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "evaluated_on",
+        "target": "attention score"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **Vision Transformer (ViT)** (score: 0.71)\n   - A transformer-based model for image classification.\n2. **self-attention** (score: 0.52)\n   - A mechanism that allows the model to weigh the importance of different parts of the input data.\n3. **Transformer** (score: 0.50)\n   - A new network architecture based solely on attention mechanisms, dispensing with recurrence and conv\n4. **Attention Pattern** (score: 0.50)\n   - A technique for configuring attention mechanisms in transformer models.\n5. **Transformer Encoder** (score: 0.49)\n   - A component of the ViT that processes input sequences using self-attention.\n\n### Relationships\n- Vision Transformer (ViT) → *trained_on* → ImageNet-21k\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- Vision Transformer (ViT) → *trained_on* → ImageNet\n- self-attention → *uses* → Swin Transformer\n- Transformer → *uses* → Attention Mechanism\n- Transformer → *improves* → BLEU\n- Transformer → *trained_on* → WMT 2014 English-to-German\n- Transformer Encoder → *is_inspired_by* → Vaswani et al. (2017)\n- Transformer Encoder → *uses* → Longformer\n- Transformer Encoder → *uses* → visual encoder",
+    "llm_summary": "The self-attention mechanism in transformers, such as the Transformer architecture introduced by Vaswani et al. (2017), allows the model to weigh the importance of different input tokens dynamically, enhancing its ability to capture contextual relationships. This mechanism is foundational to various transformer models, including the Vision Transformer (ViT), which applies self-attention to visual data, and the Transformer Encoder, which can utilize architectures like Longformer for handling longer sequences. Overall, self-attention significantly improves performance metrics, such as BLEU scores in translation tasks.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 19,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "What datasets is GPT-3 trained on?",
+    "timestamp": "2025-12-11T01:26:32.992617",
+    "entities": [
+      {
+        "name": "GPT-3",
+        "score": 0.8583395452672372,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "WebText",
+        "score": 0.4921203000492579,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Brown et al. (2020)",
+        "score": 0.46387286584170917,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer architecture",
+        "score": 0.46264011420058987,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Alpaca",
+        "score": 0.4613615314224586,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "GitHub",
+        "score": 0.44187709447224566,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Common Crawl",
+        "score": 0.3911705455816578,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "LLaMA-I",
+        "score": 0.37208525996073766,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Wikipedia",
+        "score": 0.34257491413989455,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "ViT",
+        "score": 0.3388840095350452,
+        "is_seed": false,
+        "hop_distance": 2
+      }
+    ],
+    "seed_entities": [
+      "Brown et al. (2020)",
+      "Alpaca",
+      "WebText",
+      "GitHub",
+      "GPT-3"
+    ],
+    "relationships": [
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "WebText",
+        "relation": "evaluated_on",
+        "target": "Common Crawl"
+      },
+      {
+        "source": "GitHub",
+        "relation": "semantically_related",
+        "target": "News articles"
+      },
+      {
+        "source": "Common Crawl",
+        "relation": "evaluated_on",
+        "target": "CommonCrawl"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "Chinchilla"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "PaLM"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "trained_on",
+        "target": "C4"
+      },
+      {
+        "source": "Wikipedia",
+        "relation": "evaluated_on",
+        "target": "Books3"
+      },
+      {
+        "source": "Wikipedia",
+        "relation": "evaluated_on",
+        "target": "Dataset text8"
+      },
+      {
+        "source": "Wikipedia",
+        "relation": "evaluated_on",
+        "target": "enwiki8"
+      },
+      {
+        "source": "ViT",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "ViT",
+        "relation": "optimized_with",
+        "target": "weight decay"
+      },
+      {
+        "source": "ViT",
+        "relation": "optimized_with",
+        "target": "dropout"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **GPT-3** (score: 0.86)\n   - A state-of-the-art language model that is competitive across many tasks.\n2. **WebText** (score: 0.49)\n   - A dataset used to train the GPT-2 model.\n3. **Brown et al. (2020)** (score: 0.46)\n   - Researchers who developed GPT-3.\n4. **Transformer architecture** (score: 0.46)\n   - The architecture used in GPT-3 and its variants.\n5. **Alpaca** (score: 0.46)\n   - An open-source LLM that matches the performance of GPT-3.\n\n### Relationships\n- GPT-3 → *developed_by* → OpenAI\n- GPT-3 → *uses* → few-shot learning\n- GPT-3 → *applied_to* → translation\n- WebText → *evaluated_on* → Common Crawl\n- GitHub → *semantically_related* → News articles\n- Common Crawl → *evaluated_on* → CommonCrawl\n- LLaMA-I → *is_competitive_with* → Chinchilla\n- LLaMA-I → *is_competitive_with* → PaLM\n- LLaMA-I → *trained_on* → C4\n- Wikipedia → *evaluated_on* → Books3",
+    "llm_summary": "GPT-3, developed by OpenAI, is primarily trained on a dataset known as WebText, which is derived from a wide range of internet sources, including Common Crawl. This dataset allows GPT-3 to utilize few-shot learning effectively, enabling applications such as translation. Additionally, related models like LLaMA-I, which is competitive with other architectures such as Chinchilla and PaLM, are trained on different datasets like C4, showcasing the diversity of training data in the field of AI/ML.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 15,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "How does BERT differ from GPT?",
+    "timestamp": "2025-12-11T01:26:37.292733",
+    "entities": [
+      {
+        "name": "GPT-3",
+        "score": 0.8436608047658334,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.6181022739666951,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "BERT",
+        "score": 0.4798733714651364,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer architecture",
+        "score": 0.4262226418380715,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Devlin et al.",
+        "score": 0.4114815263577809,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Clark et al.",
+        "score": 0.4027463475921974,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Brown et al. (2020)",
+        "score": 0.3831693927505836,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer-XL",
+        "score": 0.35444074932019304,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "LLaMA-I",
+        "score": 0.33167884509429024,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Longformer",
+        "score": 0.31184987076143794,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "Devlin et al.",
+      "GPT-3",
+      "BERT",
+      "Clark et al.",
+      "Brown et al. (2020)"
+    ],
+    "relationships": [
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "BERT",
+        "relation": "is_related_to",
+        "target": "T5"
+      },
+      {
+        "source": "BERT",
+        "relation": "semantically_related",
+        "target": "RoBERTa-large"
+      },
+      {
+        "source": "Devlin et al.",
+        "relation": "developed",
+        "target": "BERT"
+      },
+      {
+        "source": "Devlin et al.",
+        "relation": "semantically_related",
+        "target": "Clark et al."
+      },
+      {
+        "source": "Devlin et al.",
+        "relation": "semantically_related",
+        "target": "Liu et al."
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "improves",
+        "target": "long-term dependency"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "resolves",
+        "target": "context fragmentation"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "uses",
+        "target": "Positional Encoding"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "Chinchilla"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "PaLM"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "trained_on",
+        "target": "C4"
+      },
+      {
+        "source": "Longformer",
+        "relation": "uses",
+        "target": "self-attention"
+      },
+      {
+        "source": "Longformer",
+        "relation": "uses",
+        "target": "RoBERTa"
+      },
+      {
+        "source": "Longformer",
+        "relation": "trained_on",
+        "target": "text8"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **GPT-3** (score: 0.84)\n   - A state-of-the-art language model that is competitive across many tasks.\n2. **Vision Transformer (ViT)** (score: 0.62)\n   - A transformer-based model for image classification.\n3. **BERT** (score: 0.48)\n   - A state-of-the-art model for natural language processing tasks.\n4. **Transformer architecture** (score: 0.43)\n   - The architecture used in GPT-3 and its variants.\n5. **Devlin et al.** (score: 0.41)\n   - Researchers who developed the BERT model.\n\n### Relationships\n- GPT-3 → *developed_by* → OpenAI\n- GPT-3 → *uses* → few-shot learning\n- GPT-3 → *applied_to* → translation\n- Vision Transformer (ViT) → *trained_on* → ImageNet-21k\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- Vision Transformer (ViT) → *trained_on* → ImageNet\n- BERT → *is_related_to* → T5\n- BERT → *semantically_related* → RoBERTa-large\n- Devlin et al. → *developed* → BERT\n- Devlin et al. → *semantically_related* → Clark et al.",
+    "llm_summary": "BERT, developed by Devlin et al., differs from GPT-3, created by OpenAI, primarily in their architectures and training objectives; BERT is designed for bidirectional context understanding, while GPT-3 utilizes a unidirectional approach and excels in few-shot learning. Both models are based on the Transformer architecture, but BERT is closely related to T5 and RoBERTa-large, which further enhance its capabilities in natural language processing tasks.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 20,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "What is the Swin Transformer architecture?",
+    "timestamp": "2025-12-11T01:26:41.052821",
+    "entities": [
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.709703186776067,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Stage 1",
+        "score": 0.6519977135146379,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Swin Transformer",
+        "score": 0.6247290690776993,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "GPT-3",
+        "score": 0.5519960744553933,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Vaswani et al. (2017)",
+        "score": 0.5458644596611043,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Swin-T",
+        "score": 0.528745726781144,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "ViT/DeiT",
+        "score": 0.4856502836076727,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer architecture",
+        "score": 0.4800096110229471,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Transformer",
+        "score": 0.4379923535285576,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "ImageNet-21k",
+        "score": 0.422076317667859,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "Stage 1",
+      "Swin Transformer",
+      "Swin-T",
+      "ViT/DeiT",
+      "Vaswani et al. (2017)"
+    ],
+    "relationships": [
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "uses",
+        "target": "Transformer"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "CIFAR-10"
+      },
+      {
+        "source": "Stage 1",
+        "relation": "semantically_related",
+        "target": "Swin-T"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "uses",
+        "target": "ViT/DeiT"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "uses",
+        "target": "DetectoRS"
+      },
+      {
+        "source": "Swin Transformer",
+        "relation": "uses",
+        "target": "SETR"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "Vaswani et al. (2017)",
+        "relation": "uses",
+        "target": "Transformer architecture"
+      },
+      {
+        "source": "Vaswani et al. (2017)",
+        "relation": "semantically_related",
+        "target": "SPP+19"
+      },
+      {
+        "source": "Vaswani et al. (2017)",
+        "relation": "semantically_related",
+        "target": "Tur20"
+      },
+      {
+        "source": "Swin-T",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Swin-T",
+        "relation": "uses",
+        "target": "ViT"
+      },
+      {
+        "source": "Swin-T",
+        "relation": "compared_with",
+        "target": "DeiT-S"
+      },
+      {
+        "source": "ViT/DeiT",
+        "relation": "uses",
+        "target": "DeiT"
+      },
+      {
+        "source": "ViT/DeiT",
+        "relation": "uses",
+        "target": "hybrids"
+      },
+      {
+        "source": "Transformer architecture",
+        "relation": "is used in",
+        "target": "GPT-3"
+      },
+      {
+        "source": "Transformer",
+        "relation": "uses",
+        "target": "Attention Mechanism"
+      },
+      {
+        "source": "Transformer",
+        "relation": "improves",
+        "target": "BLEU"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-German"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "evaluated_on",
+        "target": "ILSVRC-2012 ImageNet"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "evaluated_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "ImageNet-21k",
+        "relation": "uses",
+        "target": "pre-training"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **Vision Transformer (ViT)** (score: 0.71)\n   - A transformer-based model for image classification.\n2. **Stage 1** (score: 0.65)\n   - The first stage of the Swin Transformer architecture.\n3. **Swin Transformer** (score: 0.62)\n   - A hierarchical vision transformer designed for computer vision tasks.\n4. **GPT-3** (score: 0.55)\n   - A state-of-the-art language model that is competitive across many tasks.\n5. **Vaswani et al. (2017)** (score: 0.55)\n   - The original paper introducing the Transformer architecture.\n\n### Relationships\n- Vision Transformer (ViT) → *uses* → Transformer\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- Vision Transformer (ViT) → *trained_on* → CIFAR-10\n- Stage 1 → *semantically_related* → Swin-T\n- Swin Transformer → *uses* → ViT/DeiT\n- Swin Transformer → *uses* → DetectoRS\n- Swin Transformer → *uses* → SETR\n- GPT-3 → *developed_by* → OpenAI\n- GPT-3 → *uses* → few-shot learning\n- GPT-3 → *applied_to* → translation",
+    "llm_summary": "The Swin Transformer architecture is a hierarchical vision transformer that builds upon the foundational concepts of the Vision Transformer (ViT) and its variants, such as ViT/DeiT. It incorporates a stage-wise design, specifically Stage 1, to enhance performance in vision tasks and is compatible with frameworks like DetectoRS and SETR for improved object detection and segmentation. The architecture effectively leverages the transformer principles established by Vaswani et al. (2017) while optimizing for visual data processing.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 25,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "Explain the attention mechanism",
+    "timestamp": "2025-12-11T01:26:46.113622",
+    "entities": [
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.6384716725605977,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Attention Mechanism",
+        "score": 0.5266494247781212,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Attention(Q, K, V)",
+        "score": 0.5108139316299781,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Attention",
+        "score": 0.4830905238846168,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "local, restricted attention mechanisms",
+        "score": 0.4787312309006081,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Relative Position Bias",
+        "score": 0.44968827417774115,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer",
+        "score": 0.44652151593547895,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Attention Function",
+        "score": 0.4292908948089524,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "self-attention",
+        "score": 0.4038126933345172,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Multi-Head Attention",
+        "score": 0.38689485671298934,
+        "is_seed": false,
+        "hop_distance": 2
+      }
+    ],
+    "seed_entities": [
+      "Attention(Q, K, V)",
+      "Attention Mechanism",
+      "Attention",
+      "local, restricted attention mechanisms",
+      "Relative Position Bias"
+    ],
+    "relationships": [
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "Attention Mechanism",
+        "relation": "uses",
+        "target": "local, restricted attention mechanisms"
+      },
+      {
+        "source": "Attention Mechanism",
+        "relation": "uses",
+        "target": "Self-Attention"
+      },
+      {
+        "source": "Attention Mechanism",
+        "relation": "uses",
+        "target": "self-attention"
+      },
+      {
+        "source": "Attention(Q, K, V)",
+        "relation": "based_on",
+        "target": "Attention"
+      },
+      {
+        "source": "Attention(Q, K, V)",
+        "relation": "uses",
+        "target": "local, restricted attention mechanisms"
+      },
+      {
+        "source": "Attention",
+        "relation": "uses",
+        "target": "Attention Pattern"
+      },
+      {
+        "source": "Transformer",
+        "relation": "improves",
+        "target": "BLEU"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-German"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-French"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "uses",
+        "target": "v"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "uses",
+        "target": "u"
+      },
+      {
+        "source": "Attention Function",
+        "relation": "uses",
+        "target": "self-attention"
+      },
+      {
+        "source": "self-attention",
+        "relation": "uses",
+        "target": "Swin Transformer"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **Vision Transformer (ViT)** (score: 0.64)\n   - A transformer-based model for image classification.\n2. **Attention Mechanism** (score: 0.53)\n   - A mechanism that allows modeling of dependencies without regard to their distance in input or output\n3. **Attention(Q, K, V)** (score: 0.51)\n   - The mathematical representation of the attention mechanism.\n4. **Attention** (score: 0.48)\n   - Mechanism used in Vision Transformers to integrate information across the image\n5. **local, restricted attention mechanisms** (score: 0.48)\n   - Attention mechanisms designed to efficiently handle large inputs and outputs.\n\n### Relationships\n- Vision Transformer (ViT) → *trained_on* → ImageNet-21k\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- Vision Transformer (ViT) → *trained_on* → ImageNet\n- Attention Mechanism → *uses* → local, restricted attention mechanisms\n- Attention Mechanism → *uses* → Self-Attention\n- Attention Mechanism → *uses* → self-attention\n- Attention(Q, K, V) → *based_on* → Attention\n- Attention(Q, K, V) → *uses* → local, restricted attention mechanisms\n- Attention → *uses* → Attention Pattern\n- Transformer → *improves* → BLEU",
+    "llm_summary": "The attention mechanism is a critical component of models like the Transformer, which utilizes self-attention to weigh the importance of different input elements based on their relationships. Specifically, the Attention(Q, K, V) function computes attention scores using queries (Q), keys (K), and values (V), often incorporating local, restricted attention mechanisms to enhance efficiency. This mechanism underpins architectures such as the Vision Transformer (ViT), which has been trained on large datasets like ImageNet-21k and JFT-300M, significantly improving performance metrics such as BLEU in natural language processing tasks.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 16,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "What benchmarks are used for evaluating language models?",
+    "timestamp": "2025-12-11T01:26:49.266648",
+    "entities": [
+      {
+        "name": "GPT-3",
+        "score": 0.6721197409802804,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Performance Metrics",
+        "score": 0.5304672618339895,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "BIG-bench",
+        "score": 0.5174999809883749,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "enwik8",
+        "score": 0.5160455291393061,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "text8",
+        "score": 0.5084266627028112,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "LLaMA-I",
+        "score": 0.49959102730616617,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "SuperGLUE",
+        "score": 0.4478845445373878,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "PaLM",
+        "score": 0.3874409509446133,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Transformer-XL",
+        "score": 0.3711318499175746,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Perplexity",
+        "score": 0.34904554128942894,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "Performance Metrics",
+      "BIG-bench",
+      "enwik8",
+      "text8",
+      "SuperGLUE"
+    ],
+    "relationships": [
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "Performance Metrics",
+        "relation": "semantically_related",
+        "target": "BIG-bench"
+      },
+      {
+        "source": "Performance Metrics",
+        "relation": "evaluated_on",
+        "target": "enwik8"
+      },
+      {
+        "source": "Performance Metrics",
+        "relation": "semantically_related",
+        "target": "Perplexity"
+      },
+      {
+        "source": "enwik8",
+        "relation": "evaluated_on",
+        "target": "text8"
+      },
+      {
+        "source": "enwik8",
+        "relation": "evaluated_on",
+        "target": "Dataset enwik8"
+      },
+      {
+        "source": "enwik8",
+        "relation": "evaluated_on",
+        "target": "enwiki8"
+      },
+      {
+        "source": "text8",
+        "relation": "evaluated_on",
+        "target": "Dataset text8"
+      },
+      {
+        "source": "text8",
+        "relation": "evaluated_on",
+        "target": "enwiki8"
+      },
+      {
+        "source": "text8",
+        "relation": "evaluated_on",
+        "target": "Dataset enwik8"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "outperforms",
+        "target": "GPT-3"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "Chinchilla"
+      },
+      {
+        "source": "LLaMA-I",
+        "relation": "is_competitive_with",
+        "target": "PaLM"
+      },
+      {
+        "source": "PaLM",
+        "relation": "uses",
+        "target": "Transformer"
+      },
+      {
+        "source": "PaLM",
+        "relation": "uses",
+        "target": "Pathways"
+      },
+      {
+        "source": "PaLM",
+        "relation": "trained_on",
+        "target": "TPUv4"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "improves",
+        "target": "long-term dependency"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "resolves",
+        "target": "context fragmentation"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "uses",
+        "target": "Positional Encoding"
+      },
+      {
+        "source": "Perplexity",
+        "relation": "uses",
+        "target": "Transformer-XL"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **GPT-3** (score: 0.67)\n   - A state-of-the-art language model that is competitive across many tasks.\n2. **Performance Metrics** (score: 0.53)\n   - Benchmarks used to evaluate the performance of language models.\n3. **BIG-bench** (score: 0.52)\n   - A benchmark suite for evaluating language models.\n4. **enwik8** (score: 0.52)\n   - Another benchmark dataset used for evaluating language models.\n5. **text8** (score: 0.51)\n   - A benchmark dataset used for evaluating language models.\n\n### Relationships\n- GPT-3 → *developed_by* → OpenAI\n- GPT-3 → *uses* → few-shot learning\n- GPT-3 → *applied_to* → translation\n- Performance Metrics → *semantically_related* → BIG-bench\n- Performance Metrics → *evaluated_on* → enwik8\n- Performance Metrics → *semantically_related* → Perplexity\n- enwik8 → *evaluated_on* → text8\n- enwik8 → *evaluated_on* → Dataset enwik8\n- enwik8 → *evaluated_on* → enwiki8\n- text8 → *evaluated_on* → Dataset text8",
+    "llm_summary": "Language models are evaluated using various benchmarks, including SuperGLUE, BIG-bench, enwik8, and text8. Performance metrics such as perplexity are used to assess these models, with enwik8 being a dataset that is evaluated on both itself and text8. Notably, models like GPT-3 and LLaMA-I leverage these benchmarks to demonstrate their capabilities in tasks such as translation and few-shot learning.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 22,
+      "max_hop_distance": 2
+    }
+  },
+  {
+    "question": "How do transformers handle long sequences?",
+    "timestamp": "2025-12-11T01:26:53.040372",
+    "entities": [
+      {
+        "name": "Transformer-XL",
+        "score": 0.7069147521583279,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Vision Transformer (ViT)",
+        "score": 0.650639638926412,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Longformer",
+        "score": 0.6055627001128632,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "GPT-3",
+        "score": 0.5536089523011575,
+        "is_seed": false,
+        "hop_distance": 2
+      },
+      {
+        "name": "Compressive Transformer",
+        "score": 0.4589463915635802,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer",
+        "score": 0.4424881173072441,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "positional encodings",
+        "score": 0.4371083537796364,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Longformer-large",
+        "score": 0.4230343007747014,
+        "is_seed": true,
+        "hop_distance": 0
+      },
+      {
+        "name": "Transformer architecture",
+        "score": 0.4198977068786599,
+        "is_seed": false,
+        "hop_distance": 1
+      },
+      {
+        "name": "Transformer Encoder",
+        "score": 0.33639802190961404,
+        "is_seed": false,
+        "hop_distance": 1
+      }
+    ],
+    "seed_entities": [
+      "Transformer-XL",
+      "Longformer",
+      "Compressive Transformer",
+      "positional encodings",
+      "Longformer-large"
+    ],
+    "relationships": [
+      {
+        "source": "Transformer-XL",
+        "relation": "uses",
+        "target": "Longformer"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "improves",
+        "target": "long-term dependency"
+      },
+      {
+        "source": "Transformer-XL",
+        "relation": "resolves",
+        "target": "context fragmentation"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet-21k"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "JFT-300M"
+      },
+      {
+        "source": "Vision Transformer (ViT)",
+        "relation": "trained_on",
+        "target": "ImageNet"
+      },
+      {
+        "source": "Longformer",
+        "relation": "uses",
+        "target": "self-attention"
+      },
+      {
+        "source": "Longformer",
+        "relation": "uses",
+        "target": "RoBERTa"
+      },
+      {
+        "source": "Longformer",
+        "relation": "trained_on",
+        "target": "text8"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "developed_by",
+        "target": "OpenAI"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "uses",
+        "target": "few-shot learning"
+      },
+      {
+        "source": "GPT-3",
+        "relation": "applied_to",
+        "target": "translation"
+      },
+      {
+        "source": "Transformer",
+        "relation": "uses",
+        "target": "Attention Mechanism"
+      },
+      {
+        "source": "Transformer",
+        "relation": "improves",
+        "target": "BLEU"
+      },
+      {
+        "source": "Transformer",
+        "relation": "trained_on",
+        "target": "WMT 2014 English-to-German"
+      },
+      {
+        "source": "positional encodings",
+        "relation": "semantically_related",
+        "target": "absolute positional embedding"
+      },
+      {
+        "source": "Longformer-large",
+        "relation": "improves",
+        "target": "RoBERTa-large"
+      },
+      {
+        "source": "Longformer-large",
+        "relation": "trained_on",
+        "target": "WikiHop"
+      },
+      {
+        "source": "Longformer-large",
+        "relation": "trained_on",
+        "target": "TriviaQA"
+      },
+      {
+        "source": "Transformer architecture",
+        "relation": "is used in",
+        "target": "GPT-3"
+      },
+      {
+        "source": "Transformer Encoder",
+        "relation": "is_inspired_by",
+        "target": "Vaswani et al. (2017)"
+      },
+      {
+        "source": "Transformer Encoder",
+        "relation": "uses",
+        "target": "visual encoder"
+      }
+    ],
+    "context_text": "## Retrieved Knowledge Context\n\n### Key Entities (ranked by relevance)\n1. **Transformer-XL** (score: 0.71)\n   - A model that addresses the computational efficiency of Transformers on long sequences.\n2. **Vision Transformer (ViT)** (score: 0.65)\n   - A transformer-based model for image classification.\n3. **Longformer** (score: 0.61)\n   - A modified Transformer architecture with a self-attention operation that scales linearly with sequen\n4. **GPT-3** (score: 0.55)\n   - A state-of-the-art language model that is competitive across many tasks.\n5. **Compressive Transformer** (score: 0.46)\n   - A transformer model that compresses information to handle longer sequences.\n\n### Relationships\n- Transformer-XL → *uses* → Longformer\n- Transformer-XL → *improves* → long-term dependency\n- Transformer-XL → *resolves* → context fragmentation\n- Vision Transformer (ViT) → *trained_on* → ImageNet-21k\n- Vision Transformer (ViT) → *trained_on* → JFT-300M\n- Vision Transformer (ViT) → *trained_on* → ImageNet\n- Longformer → *uses* → self-attention\n- Longformer → *uses* → RoBERTa\n- Longformer → *trained_on* → text8\n- GPT-3 → *developed_by* → OpenAI",
+    "llm_summary": "Transformers handle long sequences through various architectures designed to improve efficiency and manage long-term dependencies. For instance, Transformer-XL enhances long-term dependency management and resolves context fragmentation, while Longformer employs a self-attention mechanism to efficiently process longer inputs by reducing computational complexity. Both architectures demonstrate advancements over the standard Transformer model, with Longformer leveraging techniques from RoBERTa and being trained on datasets like text8.",
+    "stats": {
+      "total_entities": 20,
+      "total_relationships": 22,
+      "max_hop_distance": 2
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-12-11T01:19:35.114914",
+  "before": {
+    "noise": 375,
+    "generic_relations": 237,
+    "coverage": 0.3842364532019704
+  },
+  "after": {
+    "noise": 0,
+    "generic_relations": 193,
+    "coverage": 1.0,
+    "with_confidence": 822
+  },
+  "relation_distribution": {
+    "uses": 226,
+    "unknown": 112,
+    "trained_on": 57,
+    "part_of": 17,
+    "compared_to": 15,
+    "evaluated_on": 102,
+    "authored_by": 78,
+    "based_on": 5,
+    "applied_to": 9,
+    "improves": 4,
+    "semantically_related": 193,
+    "extends": 1,
+    "variant_of": 2,
+    "implements": 1
+  },
+  "time_seconds": 140.7950897216797
+}

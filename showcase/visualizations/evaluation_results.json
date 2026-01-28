@@ -1,0 +1,34 @@
+{
+  "modularity": 0.6699425005775628,
+  "silhouette_score": -0.005250431597232819,
+  "topic_coherence": 0.39238283066522506,
+  "coverage": 0.3842364532019704,
+  "graph_density": 0.0022199896292455275,
+  "avg_degree": 2.6995073891625614,
+  "relation_types": 14,
+  "relation_distribution": {
+    "uses": 226,
+    "unknown": 112,
+    "trained_on": 57,
+    "part_of": 17,
+    "compared_to": 15,
+    "evaluated_on": 102,
+    "authored_by": 78,
+    "based_on": 5,
+    "applied_to": 9,
+    "improves": 4,
+    "semantically_related": 193,
+    "extends": 1,
+    "variant_of": 2,
+    "implements": 1
+  },
+  "avg_confidence": 0.6440997566909975,
+  "timestamp": "2025-12-11T01:35:20.052643",
+  "summary": {
+    "modularity": "Good",
+    "silhouette_score": "Fair",
+    "topic_coherence": "Fair",
+    "coverage": "Fair",
+    "avg_degree": "Good"
+  }
+}

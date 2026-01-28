@@ -1,0 +1,73 @@
+{
+  "flat": {
+    "model_type": "flat",
+    "timestamp": "2025-12-11T01:45:54.698160",
+    "basic_stats": {
+      "num_topics": 14,
+      "num_nodes": 609,
+      "num_edges": 822,
+      "avg_degree": 2.6995073891625614
+    },
+    "clustering_quality": {
+      "modularity": 0.6699425005775628,
+      "coverage": 0.3842364532019704,
+      "noise_entities": 375
+    },
+    "topic_quality": {
+      "avg_coherence": 0.2079911684233045,
+      "avg_topic_size": 16.714285714285715,
+      "topic_size_std": 9.557559247815847
+    },
+    "retrieval": {
+      "avg_time": 0.13902950286865234,
+      "avg_entities_returned": 20.0
+    }
+  },
+  "hierarchical": {
+    "model_type": "hierarchical",
+    "timestamp": "2025-12-11T01:46:07.237941",
+    "tree_structure": {
+      "total_levels": 0,
+      "total_nodes": 0,
+      "leaf_nodes": 0,
+      "level_distribution": {
+        "0": 14,
+        "1": 7,
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "avg_branching_factor": 2.0
+    },
+    "parent_child_quality": {
+      "avg_parent_child_quality": 0.30738412094116213,
+      "num_evaluated_nodes": 5
+    },
+    "hierarchy_coherence": {
+      "avg_level_diversity": 0.8941490792092823,
+      "level_coherences": {
+        "0": 0.8303489685058594,
+        "1": 0.9073823065984816,
+        "2": 0.9250895977020264,
+        "3": 0.9137754440307617
+      }
+    },
+    "retrieval": {
+      "avg_time": 0.027448097864786785,
+      "avg_entities_returned": 0.0,
+      "avg_path_length": 0.0
+    }
+  },
+  "winner": {
+    "Modularity": "flat",
+    "Coverage": "flat",
+    "Topic Coherence": "hierarchical",
+    "Retrieval Speed": "hierarchical",
+    "Entities Returned": "flat"
+  },
+  "summary": {
+    "flat_wins": 3,
+    "hierarchical_wins": 2,
+    "overall_winner": "flat"
+  }
+}

@@ -1,0 +1,1987 @@
+{
+  "semantic_topics": [
+    {
+      "topic_id": "topic_004",
+      "topic_name": "Vision Transformer (ViT)",
+      "description": "Cluster of related concepts including Vision Transformer (ViT), ImageNet-21k, ImageNet and 2 more",
+      "key_entities": [
+        {
+          "name": "Vision Transformer (ViT)",
+          "importance": 0.7046706232838295,
+          "centrality": 0.02482473536051485,
+          "role": "core"
+        },
+        {
+          "name": "ImageNet-21k",
+          "importance": 0.29511652418469037,
+          "centrality": 0.010392260613898962,
+          "role": "peripheral"
+        },
+        {
+          "name": "ImageNet",
+          "importance": 0.24915937681035638,
+          "centrality": 0.006318448650840686,
+          "role": "peripheral"
+        },
+        {
+          "name": "fine-tuning",
+          "importance": 0.20088220368245463,
+          "centrality": 0.006960874140921719,
+          "role": "peripheral"
+        },
+        {
+          "name": "CIFAR-10",
+          "importance": 0.18828092355959203,
+          "centrality": 0.003066973796123852,
+          "role": "peripheral"
+        },
+        {
+          "name": "JFT-300M",
+          "importance": 0.17094544616896928,
+          "centrality": 0.004601464174208732,
+          "role": "peripheral"
+        },
+        {
+          "name": "ViT-L/16",
+          "importance": 0.15619449931183885,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "pre-training",
+          "importance": 0.12428924250315905,
+          "centrality": 0.005067357746986259,
+          "role": "peripheral"
+        },
+        {
+          "name": "ILSVRC-2012 ImageNet",
+          "importance": 0.09997884662417969,
+          "centrality": 0.004090206388565495,
+          "role": "peripheral"
+        },
+        {
+          "name": "VTAB",
+          "importance": 0.09669667225103443,
+          "centrality": 0.003262404067808005,
+          "role": "peripheral"
+        },
+        {
+          "name": "MLP Head",
+          "importance": 0.08828092355959202,
+          "centrality": 0.003066973796123852,
+          "role": "peripheral"
+        },
+        {
+          "name": "Alexey Dosovitskiy",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Lucas Beyer",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Alexander Kolesnikov",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Dirk Weissenborn",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Xiaohua Zhai",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Thomas Unterthiner",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Mostafa Dehghani",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Matthias Minderer",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Georg Heigold",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Sylvain Gelly",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Neil Houlsby",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "CNN",
+          "importance": 0.06398073652102307,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Transformers",
+          "importance": 0.06328092355959203,
+          "centrality": 0.003066973796123852,
+          "role": "peripheral"
+        },
+        {
+          "name": "TPUv3",
+          "importance": 0.058415748691442386,
+          "centrality": 0.0013446745275661593,
+          "role": "peripheral"
+        },
+        {
+          "name": "SGD",
+          "importance": 0.0571417702426477,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Self-Supervised Learning",
+          "importance": 0.038980736521023074,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "CPC loss",
+          "importance": 0.007172971860521041,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.36199254990413465,
+      "entity_count": 28,
+      "keywords": [
+        "person",
+        "metric",
+        "architecture",
+        "dataset",
+        "method",
+        "hardware",
+        "model",
+        "Architecture",
+        "Architecture Component",
+        "Learning Method"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_008",
+          "similarity": 0.10714285714285714
+        },
+        {
+          "topic_id": "topic_006",
+          "similarity": 0.10714285714285714
+        },
+        {
+          "topic_id": "topic_007",
+          "similarity": 0.07142857142857142
+        },
+        {
+          "topic_id": "topic_005",
+          "similarity": 0.03571428571428571
+        },
+        {
+          "topic_id": "topic_009",
+          "similarity": 0.03571428571428571
+        }
+      ],
+      "quality": {
+        "internal_density": 0.046296296296296294,
+        "avg_importance": 0.12025915253811427
+      },
+      "documents": [
+        "reformer",
+        "deit",
+        "swin_transformer",
+        "palm",
+        "vision_transformer",
+        "segment_anything",
+        "gpt3",
+        "longformer",
+        "clip",
+        "gpt3_language_models"
+      ]
+    },
+    {
+      "topic_id": "topic_003",
+      "topic_name": "GPT-3",
+      "description": "Cluster of related concepts including GPT-3, LLaMA-I, Common Crawl and 2 more",
+      "key_entities": [
+        {
+          "name": "GPT-3",
+          "importance": 0.8629572421542531,
+          "centrality": 0.018818293659738593,
+          "role": "core"
+        },
+        {
+          "name": "LLaMA-I",
+          "importance": 0.5815983013644597,
+          "centrality": 0.006257493143608254,
+          "role": "supporting"
+        },
+        {
+          "name": "Common Crawl",
+          "importance": 0.23032577022035994,
+          "centrality": 0.008060344444078802,
+          "role": "peripheral"
+        },
+        {
+          "name": "Wikipedia",
+          "importance": 0.19385141474281103,
+          "centrality": 0.0028408683113150565,
+          "role": "peripheral"
+        },
+        {
+          "name": "Natural Questions",
+          "importance": 0.1353090254014083,
+          "centrality": 0.002303114363975885,
+          "role": "peripheral"
+        },
+        {
+          "name": "CommonCrawl",
+          "importance": 0.1353090254014083,
+          "centrality": 0.002303114363975885,
+          "role": "peripheral"
+        },
+        {
+          "name": "Books1",
+          "importance": 0.13453763007265696,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "WebText",
+          "importance": 0.10953763007265693,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "Gopher",
+          "importance": 0.10322358876685495,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "V100 GPU",
+          "importance": 0.09634581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "RACE",
+          "importance": 0.08896321491447962,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "translation",
+          "importance": 0.07134581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "question-answering",
+          "importance": 0.07134581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "cloze tasks",
+          "importance": 0.07134581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "CoQA",
+          "importance": 0.07134581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "Books",
+          "importance": 0.06396321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "pass@",
+          "importance": 0.06396321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "LaMDA",
+          "importance": 0.06396321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Validation loss",
+          "importance": 0.05942166417495598,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "780 billion tokens",
+          "importance": 0.04954798020540731,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "task-specific fine-tuning",
+          "importance": 0.04634581048692867,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "C4",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Github",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "ArXiv",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "StackExchange",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Performance Metrics",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "OPT",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "OPT-IML",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "MATH",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "GSM8k",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "BoolQ",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Flan-PaLM",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Exact Match",
+          "importance": 0.03896321491447961,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "LLaMA-Adapter",
+          "importance": 0.03626629039424362,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "societal impacts",
+          "importance": 0.03442166417495598,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "GitHub",
+          "importance": 0.016443842860301518,
+          "centrality": 0.0016869982032211774,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.35359470095384105,
+      "entity_count": 36,
+      "keywords": [
+        "metric",
+        "task",
+        "Metric",
+        "Model",
+        "dataset",
+        "Language Model",
+        "hardware",
+        "Data Source",
+        "model",
+        "concept"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_001",
+          "similarity": 0.16666666666666666
+        },
+        {
+          "topic_id": "topic_005",
+          "similarity": 0.1111111111111111
+        },
+        {
+          "topic_id": "topic_007",
+          "similarity": 0.1111111111111111
+        },
+        {
+          "topic_id": "topic_011",
+          "similarity": 0.05555555555555555
+        }
+      ],
+      "quality": {
+        "internal_density": 0.03571428571428571,
+        "avg_importance": 0.10720103809888831
+      },
+      "documents": [
+        "llama",
+        "palm",
+        "segment_anything",
+        "gpt3",
+        "clip",
+        "gpt3_language_models"
+      ]
+    },
+    {
+      "topic_id": "topic_007",
+      "topic_name": "Transformer architecture",
+      "description": "Cluster of related concepts including Transformer architecture, Longformer, self-attention and 2 more",
+      "key_entities": [
+        {
+          "name": "Transformer architecture",
+          "importance": 0.33816875482728587,
+          "centrality": 0.008545848835985975,
+          "role": "peripheral"
+        },
+        {
+          "name": "Longformer",
+          "importance": 0.29269266408736677,
+          "centrality": 0.008041616010407168,
+          "role": "peripheral"
+        },
+        {
+          "name": "self-attention",
+          "importance": 0.2267389306232822,
+          "centrality": 0.0035554805464736244,
+          "role": "peripheral"
+        },
+        {
+          "name": "Vaswani et al. (2017)",
+          "importance": 0.21122768127869235,
+          "centrality": 0.004913647094008437,
+          "role": "peripheral"
+        },
+        {
+          "name": "TriviaQA",
+          "importance": 0.18788373116466134,
+          "centrality": 0.00298705138600981,
+          "role": "peripheral"
+        },
+        {
+          "name": "ViT-Large",
+          "importance": 0.1310785952057862,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "BERT",
+          "importance": 0.1261697461339757,
+          "centrality": 0.004569205081494072,
+          "role": "peripheral"
+        },
+        {
+          "name": "Transformer Encoder",
+          "importance": 0.12339110609641057,
+          "centrality": 0.003066973796123852,
+          "role": "peripheral"
+        },
+        {
+          "name": "T5",
+          "importance": 0.08031209125843566,
+          "centrality": 0.005034668248696935,
+          "role": "peripheral"
+        },
+        {
+          "name": "Sparse Transformer",
+          "importance": 0.07981508155402475,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "Position Embeddings",
+          "importance": 0.07297746063310764,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "text8",
+          "importance": 0.06695021519164732,
+          "centrality": 0.0030304233869745596,
+          "role": "peripheral"
+        },
+        {
+          "name": "ViT-Base",
+          "importance": 0.0560785952057862,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "enwik8",
+          "importance": 0.04930320156154448,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "Transformer Architecture",
+          "importance": 0.048240165855644425,
+          "centrality": 0.0013620809641777182,
+          "role": "peripheral"
+        },
+        {
+          "name": "Longformer-large",
+          "importance": 0.03769021413944846,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "RoBERTa",
+          "importance": 0.03553932405248168,
+          "centrality": 0.002614902364652543,
+          "role": "peripheral"
+        },
+        {
+          "name": "Compressive Transformer",
+          "importance": 0.03374436075794925,
+          "centrality": 0.0021263956143027707,
+          "role": "peripheral"
+        },
+        {
+          "name": "WikiHop",
+          "importance": 0.027574705763253084,
+          "centrality": 0.0018331812779159317,
+          "role": "peripheral"
+        },
+        {
+          "name": "coreference resolution",
+          "importance": 0.026710171046047358,
+          "centrality": 0.0023218258859869236,
+          "role": "peripheral"
+        },
+        {
+          "name": "LED",
+          "importance": 0.022977460633107655,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "MLM",
+          "importance": 0.018138750955688298,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "Attention Pattern",
+          "importance": 0.018138750955688298,
+          "centrality": 0.001637751006231779,
+          "role": "peripheral"
+        },
+        {
+          "name": "Adaptive Span",
+          "importance": 0.011948719903861274,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "HotpotQA",
+          "importance": 0.009435954807564793,
+          "centrality": 0.0013446745275661593,
+          "role": "peripheral"
+        },
+        {
+          "name": "RoBERTa-large",
+          "importance": 0.009435954807564793,
+          "centrality": 0.0013446745275661593,
+          "role": "peripheral"
+        },
+        {
+          "name": "Devlin et al.",
+          "importance": 0.006078595205786209,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Liu et al.",
+          "importance": 0.005984396131043655,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Rae et al.",
+          "importance": 0.005984396131043655,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "OntoNotes",
+          "importance": 0.005180425816663143,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.34326534062149905,
+      "entity_count": 30,
+      "keywords": [
+        "task",
+        "Model",
+        "dataset",
+        "architecture",
+        "method",
+        "People",
+        "model",
+        "Dataset",
+        "Architecture",
+        "Citation"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_003",
+          "similarity": 0.13333333333333333
+        },
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.06666666666666667
+        },
+        {
+          "topic_id": "topic_009",
+          "similarity": 0.06666666666666667
+        },
+        {
+          "topic_id": "topic_006",
+          "similarity": 0.03333333333333333
+        },
+        {
+          "topic_id": "topic_008",
+          "similarity": 0.03333333333333333
+        }
+      ],
+      "quality": {
+        "internal_density": 0.03908045977011494,
+        "avg_importance": 0.07885300672616144
+      },
+      "documents": [
+        "transformer_xl",
+        "reformer",
+        "deit",
+        "swin_transformer",
+        "llama",
+        "palm",
+        "vision_transformer",
+        "gpt3",
+        "longformer",
+        "gpt3_language_models"
+      ]
+    },
+    {
+      "topic_id": "topic_005",
+      "topic_name": "CLIP",
+      "description": "Cluster of related concepts including CLIP, few-shot learning, OpenAI and 2 more",
+      "key_entities": [
+        {
+          "name": "CLIP",
+          "importance": 0.22870840935667666,
+          "centrality": 0.004017281052824564,
+          "role": "peripheral"
+        },
+        {
+          "name": "few-shot learning",
+          "importance": 0.18420174919715498,
+          "centrality": 0.0035560046933113196,
+          "role": "peripheral"
+        },
+        {
+          "name": "OpenAI",
+          "importance": 0.166072701867788,
+          "centrality": 0.002090277655680173,
+          "role": "peripheral"
+        },
+        {
+          "name": "meta-learning",
+          "importance": 0.1376387978204921,
+          "centrality": 0.008022251854755252,
+          "role": "peripheral"
+        },
+        {
+          "name": "in-context learning",
+          "importance": 0.097278847368122,
+          "centrality": 0.003067429014100938,
+          "role": "peripheral"
+        },
+        {
+          "name": "ResNet-50",
+          "importance": 0.07132826856004751,
+          "centrality": 0.0018316821043391687,
+          "role": "peripheral"
+        },
+        {
+          "name": "cross_entropy_loss",
+          "importance": 0.062173733757226554,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "zero-shot learning",
+          "importance": 0.062173733757226554,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "zero-shot transfer",
+          "importance": 0.044206869305222815,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "Johns Hopkins University",
+          "importance": 0.042659720024149916,
+          "centrality": 0.0017416670662853437,
+          "role": "peripheral"
+        },
+        {
+          "name": "NLP",
+          "importance": 0.03998864683330615,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "visual feature Z",
+          "importance": 0.03752752503187741,
+          "centrality": 0.0024369083363361154,
+          "role": "peripheral"
+        },
+        {
+          "name": "K",
+          "importance": 0.035018791537395594,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "RWC+19",
+          "importance": 0.0348843257139064,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "language embedding tokens H",
+          "importance": 0.03165707295518624,
+          "centrality": 0.0032213391862991533,
+          "role": "peripheral"
+        },
+        {
+          "name": "projection matrix W",
+          "importance": 0.030400870860881918,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Visual N-Grams",
+          "importance": 0.024980002200902747,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "Elhoseiny et al. (2013)",
+          "importance": 0.013250322116301928,
+          "centrality": 0.0017698331190785556,
+          "role": "peripheral"
+        },
+        {
+          "name": "YFCC100M",
+          "importance": 0.012173733757226562,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "WIT",
+          "importance": 0.012173733757226562,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "SUN",
+          "importance": 0.012173733757226562,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "Yahoo",
+          "importance": 0.012173733757226562,
+          "centrality": 0.0014597569779153515,
+          "role": "peripheral"
+        },
+        {
+          "name": "language tasks",
+          "importance": 0.011864207648708866,
+          "centrality": 0.0016378199350923885,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.310658979984753,
+      "entity_count": 23,
+      "keywords": [
+        "metric",
+        "dataset",
+        "field",
+        "method",
+        "people",
+        "reference",
+        "parameter",
+        "model",
+        "concept",
+        "data"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_003",
+          "similarity": 0.17391304347826086
+        },
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.043478260869565216
+        },
+        {
+          "topic_id": "topic_011",
+          "similarity": 0.043478260869565216
+        },
+        {
+          "topic_id": "topic_006",
+          "similarity": 0.043478260869565216
+        }
+      ],
+      "quality": {
+        "internal_density": 0.04743083003952569,
+        "avg_importance": 0.06107432743223828
+      },
+      "documents": [
+        "swin_transformer",
+        "palm",
+        "segment_anything",
+        "gpt3",
+        "clip",
+        "gpt3_language_models"
+      ]
+    },
+    {
+      "topic_id": "topic_009",
+      "topic_name": "Transformer",
+      "description": "Cluster of related concepts including Transformer, Transformer-XL, Positional Encoding and 2 more",
+      "key_entities": [
+        {
+          "name": "Transformer",
+          "importance": 0.3332547445162759,
+          "centrality": 0.008595654786197731,
+          "role": "peripheral"
+        },
+        {
+          "name": "Transformer-XL",
+          "importance": 0.30353286317982503,
+          "centrality": 0.012433556432777474,
+          "role": "peripheral"
+        },
+        {
+          "name": "Positional Encoding",
+          "importance": 0.14212584158157684,
+          "centrality": 0.004812614192035296,
+          "role": "peripheral"
+        },
+        {
+          "name": "BLEU",
+          "importance": 0.08044805803768593,
+          "centrality": 0.0026106323658725895,
+          "role": "peripheral"
+        },
+        {
+          "name": "Perplexity",
+          "importance": 0.07833552714628704,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "Self-Attention",
+          "importance": 0.060286767715105286,
+          "centrality": 0.0026106323658725895,
+          "role": "peripheral"
+        },
+        {
+          "name": "WMT 2014 English-to-German",
+          "importance": 0.05544805803768593,
+          "centrality": 0.0026106323658725895,
+          "role": "peripheral"
+        },
+        {
+          "name": "WMT 2014 English-to-French",
+          "importance": 0.05544805803768593,
+          "centrality": 0.0026106323658725895,
+          "role": "peripheral"
+        },
+        {
+          "name": "hidden state",
+          "importance": 0.03174776166682731,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Attention Mechanism",
+          "importance": 0.030448058037685938,
+          "centrality": 0.0026106323658725895,
+          "role": "peripheral"
+        },
+        {
+          "name": "RNN",
+          "importance": 0.028712214481946358,
+          "centrality": 0.0021263956143027707,
+          "role": "peripheral"
+        },
+        {
+          "name": "long-term dependency",
+          "importance": 0.028335527146287044,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "WikiText-103",
+          "importance": 0.02349681746886769,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "One Billion Word",
+          "importance": 0.02349681746886769,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "context fragmentation",
+          "importance": 0.02349681746886769,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "AWD-LSTM",
+          "importance": 0.02349681746886769,
+          "centrality": 0.002471051328056027,
+          "role": "peripheral"
+        },
+        {
+          "name": "LSTM",
+          "importance": 0.006747761666827309,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "SG function",
+          "importance": 0.006747761666827309,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Shaw et al. (2018)",
+          "importance": 0.006747761666827309,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Huang et al. (2018)",
+          "importance": 0.006567816648551173,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "BPTT",
+          "importance": 0.005146341259622738,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.29164891794988573,
+      "entity_count": 21,
+      "keywords": [
+        "metric",
+        "dataset",
+        "architecture",
+        "method",
+        "function",
+        "problem",
+        "concept",
+        "publication"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_007",
+          "similarity": 0.09523809523809523
+        },
+        {
+          "topic_id": "topic_006",
+          "similarity": 0.047619047619047616
+        },
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.047619047619047616
+        },
+        {
+          "topic_id": "topic_001",
+          "similarity": 0.047619047619047616
+        }
+      ],
+      "quality": {
+        "internal_density": 0.05952380952380952,
+        "avg_importance": 0.06447943773185719
+      },
+      "documents": [
+        "transformer_xl",
+        "reformer",
+        "deit",
+        "llama",
+        "palm",
+        "gpt3",
+        "longformer",
+        "attention_is_all_you_need",
+        "gpt3_language_models"
+      ]
+    },
+    {
+      "topic_id": "topic_008",
+      "topic_name": "ViT",
+      "description": "Cluster of related concepts including ViT, ViT-H/14, Swin-T and 2 more",
+      "key_entities": [
+        {
+          "name": "ViT",
+          "importance": 0.2281355463840795,
+          "centrality": 0.007876293496778682,
+          "role": "peripheral"
+        },
+        {
+          "name": "ViT-H/14",
+          "importance": 0.13058870928906605,
+          "centrality": 0.0051219607154367125,
+          "role": "peripheral"
+        },
+        {
+          "name": "Swin-T",
+          "importance": 0.11648124737891022,
+          "centrality": 0.0021263956143027707,
+          "role": "peripheral"
+        },
+        {
+          "name": "BiT",
+          "importance": 0.10384799168583798,
+          "centrality": 0.0033261607499860857,
+          "role": "peripheral"
+        },
+        {
+          "name": "Noisy Student",
+          "importance": 0.08735641121552246,
+          "centrality": 0.0033261607499860857,
+          "role": "peripheral"
+        },
+        {
+          "name": "weight decay",
+          "importance": 0.07424877391793488,
+          "centrality": 0.002488304362282734,
+          "role": "peripheral"
+        },
+        {
+          "name": "dropout",
+          "importance": 0.07424877391793488,
+          "centrality": 0.002488304362282734,
+          "role": "peripheral"
+        },
+        {
+          "name": "label smoothing",
+          "importance": 0.07424877391793488,
+          "centrality": 0.002488304362282734,
+          "role": "peripheral"
+        },
+        {
+          "name": "Big Transfer (BiT)",
+          "importance": 0.06567802960119432,
+          "centrality": 0.0013446745275661593,
+          "role": "peripheral"
+        },
+        {
+          "name": "DeiT-S",
+          "importance": 0.013381503369662248,
+          "centrality": 0.0017519337766969442,
+          "role": "peripheral"
+        },
+        {
+          "name": "Hybrid models",
+          "importance": 0.007281099197066708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "hybrids",
+          "importance": 0.007281099197066708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Cascade Mask R-CNN",
+          "importance": 0.005744624563414345,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.24041607949648075,
+      "entity_count": 13,
+      "keywords": [
+        "Model",
+        "architecture",
+        "method",
+        "hyperparameter",
+        "model variant",
+        "model",
+        "framework"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.23076923076923078
+        },
+        {
+          "topic_id": "topic_007",
+          "similarity": 0.07692307692307693
+        },
+        {
+          "topic_id": "topic_006",
+          "similarity": 0.07692307692307693
+        }
+      ],
+      "quality": {
+        "internal_density": 0.08333333333333333,
+        "avg_importance": 0.07604019874120192
+      },
+      "documents": [
+        "reformer",
+        "deit",
+        "vision_transformer",
+        "swin_transformer"
+      ]
+    },
+    {
+      "topic_id": "topic_001",
+      "topic_name": "PaLM",
+      "description": "Cluster of related concepts including PaLM, Google Research, Chinchilla and 2 more",
+      "key_entities": [
+        {
+          "name": "PaLM",
+          "importance": 0.29856816843129114,
+          "centrality": 0.0021763737628616884,
+          "role": "peripheral"
+        },
+        {
+          "name": "Google Research",
+          "importance": 0.1369031734278509,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Chinchilla",
+          "importance": 0.08201497395733845,
+          "centrality": 0.0016877980836513065,
+          "role": "peripheral"
+        },
+        {
+          "name": "SwiGLU",
+          "importance": 0.0493880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "WinoGender",
+          "importance": 0.0493880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "LLaMA-65B",
+          "importance": 0.038734366004454374,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Pathways",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "TPUv4",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "BIG-bench",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "RoPE",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "SentencePiece",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "540B parameters",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "62B parameters",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "8B parameters",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "JAX",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "T5X",
+          "importance": 0.0243880006706006,
+          "centrality": 0.0012649040620569207,
+          "role": "peripheral"
+        },
+        {
+          "name": "RealToxicityPrompts",
+          "importance": 0.012771664355625718,
+          "centrality": 0.0014749613753555944,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.2240976083346769,
+      "entity_count": 17,
+      "keywords": [
+        "benchmark",
+        "dataset",
+        "embedding",
+        "Language Model",
+        "Benchmark",
+        "model",
+        "System",
+        "activation function",
+        "Hardware",
+        "Model Scale"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_003",
+          "similarity": 0.35294117647058826
+        },
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.058823529411764705
+        },
+        {
+          "topic_id": "topic_009",
+          "similarity": 0.058823529411764705
+        }
+      ],
+      "quality": {
+        "internal_density": 0.058823529411764705,
+        "avg_importance": 0.053626373777868684
+      },
+      "documents": [
+        "reformer",
+        "deit",
+        "llama",
+        "palm",
+        "vision_transformer",
+        "attention_is_all_you_need"
+      ]
+    },
+    {
+      "topic_id": "topic_006",
+      "topic_name": "ResNet-101",
+      "description": "Cluster of related concepts including ResNet-101, Swin Transformer, EfficientNet and 2 more",
+      "key_entities": [
+        {
+          "name": "ResNet-101",
+          "importance": 0.2525150673902393,
+          "centrality": 0.00473218254207593,
+          "role": "peripheral"
+        },
+        {
+          "name": "Swin Transformer",
+          "importance": 0.23314658611245886,
+          "centrality": 0.0061253449377267274,
+          "role": "peripheral"
+        },
+        {
+          "name": "EfficientNet",
+          "importance": 0.04541076240407216,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "AdamW",
+          "importance": 0.03708866210407426,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "FLOPs",
+          "importance": 0.03708866210407426,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "ViT/DeiT",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "DetectoRS",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "SETR",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "DeiT",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "RegNet",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "Relative Position Bias",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "Top-1 Accuracy",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "HTC++",
+          "importance": 0.012088662104074256,
+          "centrality": 0.0015211693823058235,
+          "role": "peripheral"
+        },
+        {
+          "name": "feature pyramid networks (FPN)",
+          "importance": 0.007375875474473507,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "U-Net",
+          "importance": 0.007375875474473507,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.20354085910581038,
+      "entity_count": 15,
+      "keywords": [
+        "metric",
+        "Metric",
+        "architecture",
+        "method",
+        "optimizer",
+        "Framework"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.2
+        },
+        {
+          "topic_id": "topic_008",
+          "similarity": 0.06666666666666667
+        },
+        {
+          "topic_id": "topic_009",
+          "similarity": 0.06666666666666667
+        },
+        {
+          "topic_id": "topic_005",
+          "similarity": 0.06666666666666667
+        },
+        {
+          "topic_id": "topic_007",
+          "similarity": 0.06666666666666667
+        }
+      ],
+      "quality": {
+        "internal_density": 0.07142857142857142,
+        "avg_importance": 0.047780719193097315
+      },
+      "documents": [
+        "reformer",
+        "deit",
+        "swin_transformer",
+        "llama",
+        "palm",
+        "vision_transformer",
+        "clip"
+      ]
+    },
+    {
+      "topic_id": "topic_011",
+      "topic_name": "LLaVA",
+      "description": "Cluster of related concepts including LLaVA, LMM, OpenFlamingo and 2 more",
+      "key_entities": [
+        {
+          "name": "LLaVA",
+          "importance": 0.095833932168025,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "LMM",
+          "importance": 0.07123494811732231,
+          "centrality": 0.005140941409967469,
+          "role": "peripheral"
+        },
+        {
+          "name": "OpenFlamingo",
+          "importance": 0.0506065841269285,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "Vicuna",
+          "importance": 0.0385326530764299,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "instruction-following capability",
+          "importance": 0.030941934923054047,
+          "centrality": 0.002224110750144847,
+          "role": "peripheral"
+        },
+        {
+          "name": "multi-turn conversation data",
+          "importance": 0.02367253453970585,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "COCO-Val-2014",
+          "importance": 0.01947465425391959,
+          "centrality": 0.0022094873347051755,
+          "role": "peripheral"
+        },
+        {
+          "name": "BLIP-2",
+          "importance": 0.01861320612488576,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "LLaVA-Bench",
+          "importance": 0.01859769066017883,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "Science QA",
+          "importance": 0.0135326530764299,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "Flamingo",
+          "importance": 0.0135326530764299,
+          "centrality": 0.0012469593917240828,
+          "role": "peripheral"
+        },
+        {
+          "name": "instruction tokens X",
+          "importance": 0.01278851126521904,
+          "centrality": 0.001679365795293591,
+          "role": "peripheral"
+        },
+        {
+          "name": "assistant answers X",
+          "importance": 0.01278851126521904,
+          "centrality": 0.001679365795293591,
+          "role": "peripheral"
+        },
+        {
+          "name": "evaluation metric",
+          "importance": 0.006039962561939868,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "FROMAGe",
+          "importance": 0.005042988366769589,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "KOSMOS-1",
+          "importance": 0.005042988366769589,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "PaLM-E",
+          "importance": 0.005042988366769589,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.18503104457261166,
+      "entity_count": 17,
+      "keywords": [
+        "metric",
+        "benchmark",
+        "dataset",
+        "model",
+        "data",
+        "Technology"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_003",
+          "similarity": 0.11764705882352941
+        },
+        {
+          "topic_id": "topic_005",
+          "similarity": 0.058823529411764705
+        }
+      ],
+      "quality": {
+        "internal_density": 0.058823529411764705,
+        "avg_importance": 0.025959964372705664
+      },
+      "documents": [
+        "segment_anything"
+      ]
+    },
+    {
+      "topic_id": "topic_000",
+      "topic_name": "Jakob Uszkoreit",
+      "description": "Cluster of related concepts including Jakob Uszkoreit, Google Brain, Ashish Vaswani and 2 more",
+      "key_entities": [
+        {
+          "name": "Jakob Uszkoreit",
+          "importance": 0.09959312814476012,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Google Brain",
+          "importance": 0.06550119187860652,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Ashish Vaswani",
+          "importance": 0.0566681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Noam Shazeer",
+          "importance": 0.0566681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Niki Parmar",
+          "importance": 0.0066681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Llion Jones",
+          "importance": 0.0066681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Aidan N. Gomez",
+          "importance": 0.0066681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Łukasz Kaiser",
+          "importance": 0.0066681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Illia Polosukhin",
+          "importance": 0.0066681000466778,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.16018982312667163,
+      "entity_count": 9,
+      "keywords": [
+        "person",
+        "organization"
+      ],
+      "related_topics": [
+        {
+          "topic_id": "topic_004",
+          "similarity": 0.1111111111111111
+        }
+      ],
+      "quality": {
+        "internal_density": 0.1111111111111111,
+        "avg_importance": 0.034641224483345695
+      },
+      "documents": [
+        "transformer_xl",
+        "reformer",
+        "deit",
+        "vision_transformer",
+        "attention_is_all_you_need"
+      ]
+    },
+    {
+      "topic_id": "topic_002",
+      "topic_name": "Attention Function",
+      "description": "Cluster of related concepts including Attention Function, Multi-Head Attention, Decoder and 2 more",
+      "key_entities": [
+        {
+          "name": "Attention Function",
+          "importance": 0.09131554270345918,
+          "centrality": 0.007591986466345949,
+          "role": "peripheral"
+        },
+        {
+          "name": "Multi-Head Attention",
+          "importance": 0.08162044490822758,
+          "centrality": 0.006427215788819732,
+          "role": "peripheral"
+        },
+        {
+          "name": "Decoder",
+          "importance": 0.055335894156931936,
+          "centrality": 0.0035921226519339176,
+          "role": "peripheral"
+        },
+        {
+          "name": "Encoder",
+          "importance": 0.03804024617157851,
+          "centrality": 0.002614971293513153,
+          "role": "peripheral"
+        },
+        {
+          "name": "Residual Connection",
+          "importance": 0.009677419354838708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Layer Normalization",
+          "importance": 0.009677419354838708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Feed-Forward Network",
+          "importance": 0.009677419354838708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Scaled Dot-Product Attention",
+          "importance": 0.004838709677419354,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Softmax Function",
+          "importance": 0.004838709677419354,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.1403898580159801,
+      "entity_count": 9,
+      "keywords": [
+        "Architecture",
+        "Method"
+      ],
+      "related_topics": [],
+      "quality": {
+        "internal_density": 0.1527777777777778,
+        "avg_importance": 0.03389131170661689
+      },
+      "documents": [
+        "attention_is_all_you_need"
+      ]
+    },
+    {
+      "topic_id": "topic_010",
+      "topic_name": "TPU v4",
+      "description": "Cluster of related concepts including TPU v4, JAX/XLA, Pathways system",
+      "key_entities": [
+        {
+          "name": "TPU v4",
+          "importance": 0.011029614149700107,
+          "centrality": 0.0016378199350923885,
+          "role": "peripheral"
+        },
+        {
+          "name": "JAX/XLA",
+          "importance": 0.011029614149700107,
+          "centrality": 0.0016378199350923885,
+          "role": "peripheral"
+        },
+        {
+          "name": "Pathways system",
+          "importance": 0.009677419354838708,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.13123155302056516,
+      "entity_count": 3,
+      "keywords": [
+        "system",
+        "hardware",
+        "software"
+      ],
+      "related_topics": [],
+      "quality": {
+        "internal_density": 0.3333333333333333,
+        "avg_importance": 0.010578882551412974
+      },
+      "documents": [
+        "palm"
+      ]
+    },
+    {
+      "topic_id": "topic_013",
+      "topic_name": "query vector",
+      "description": "Cluster of related concepts including query vector, key vector, u and 1 more",
+      "key_entities": [
+        {
+          "name": "query vector",
+          "importance": 0.039354876284753634,
+          "centrality": 0.003103546972723535,
+          "role": "peripheral"
+        },
+        {
+          "name": "key vector",
+          "importance": 0.03827817357034528,
+          "centrality": 0.0037882300223508695,
+          "role": "peripheral"
+        },
+        {
+          "name": "u",
+          "importance": 0.004838709677419354,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "v",
+          "importance": 0.004838709677419354,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.11973104692099376,
+      "entity_count": 4,
+      "keywords": [
+        "concept",
+        "parameter"
+      ],
+      "related_topics": [],
+      "quality": {
+        "internal_density": 0.25,
+        "avg_importance": 0.021827617302484406
+      },
+      "documents": [
+        "transformer_xl"
+      ]
+    },
+    {
+      "topic_id": "topic_012",
+      "topic_name": "Microsoft Research Asia",
+      "description": "Cluster of related concepts including Microsoft Research Asia, Ze Liu, Yutong Lin and 2 more",
+      "key_entities": [
+        {
+          "name": "Microsoft Research Asia",
+          "importance": 0.038709677419354833,
+          "centrality": 0.0011492442558820063,
+          "role": "peripheral"
+        },
+        {
+          "name": "Ze Liu",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Yutong Lin",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Yue Cao",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Han Hu",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Yixuan Wei",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Zheng Zhang",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Stephen Lin",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        },
+        {
+          "name": "Baining Guo",
+          "importance": 0.0063864357954895425,
+          "centrality": 0.0012713881756846019,
+          "role": "peripheral"
+        }
+      ],
+      "score": 0.11832449616814539,
+      "entity_count": 9,
+      "keywords": [
+        "person",
+        "organization"
+      ],
+      "related_topics": [],
+      "quality": {
+        "internal_density": 0.1111111111111111,
+        "avg_importance": 0.00997790708703013
+      },
+      "documents": [
+        "swin_transformer"
+      ]
+    }
+  ],
+  "quality_metrics": {
+    "num_clusters": 14,
+    "modularity": 0.786853880385349,
+    "coverage": 0.3842364532019704,
+    "num_nodes": 609,
+    "num_clustered": 234,
+    "num_noise": 375,
+    "avg_cluster_size": 16.714285714285715,
+    "min_cluster_size": 3,
+    "max_cluster_size": 36
+  },
+  "global_metrics": {
+    "total_entities": 609,
+    "total_relations": 304,
+    "graph_density": 0.0008210180623973727,
+    "num_topics": 14
+  }
+}

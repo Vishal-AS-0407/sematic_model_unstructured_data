@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entity Hierarchy Sunburst</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a1a2a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #e8e8e8;
+        }
+        .header {
+            width: 100%;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            background: linear-gradient(90deg, #ffd700, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        #sunburst-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(20, 20, 40, 0.95);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 12px;
+            max-width: 250px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            pointer-events: none;
+            opacity: 0;
+            z-index: 1000;
+        }
+        .tooltip h3 { color: #ffd700; margin-bottom: 6px; }
+        .tooltip p { font-size: 12px; color: #a0a0a0; }
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            background: rgba(20, 20, 40, 0.8);
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>☀️ Entity Hierarchy Sunburst</h1>
+    </div>
+    <div id="sunburst-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="instructions">
+        Click segments to zoom in | Click center to zoom out
+    </div>
+    <script>
+        const data = {"name": "Knowledge Base Root", "value": 15, "type": "root", "children": [{"name": "Transformer & Vision", "value": 13, "type": "branch", "children": [{"name": "Transformer & Vision", "value": 34, "type": "branch", "children": [{"name": "Transformer & Vision", "value": 30, "type": "branch", "children": [{"name": "Vision Transformer (ViT)", "value": 28, "type": "leaf"}, {"name": "Transformer architecture", "value": 30, "type": "leaf"}, {"name": "Transformer", "value": 21, "type": "leaf"}, {"name": "ViT", "value": 13, "type": "leaf"}, {"name": "ResNet-101", "value": 15, "type": "leaf"}, {"name": "Attention Function", "value": 9, "type": "leaf"}]}, {"name": "GPT & PaLM", "value": 15, "type": "branch", "children": [{"name": "GPT-3", "value": 36, "type": "leaf"}, {"name": "PaLM", "value": 17, "type": "leaf"}, {"name": "LLaVA", "value": 17, "type": "leaf"}]}, {"name": "CLIP", "value": 5, "type": "branch", "children": [{"name": "CLIP", "value": 23, "type": "leaf"}]}, {"name": "query & vector", "value": 4, "type": "branch", "children": [{"name": "query vector", "value": 4, "type": "leaf"}]}, {"name": "Microsoft & Research", "value": 5, "type": "branch", "children": [{"name": "Microsoft Research Asia", "value": 9, "type": "leaf"}]}]}, {"name": "TPU", "value": 3, "type": "branch", "children": [{"name": "TPU", "value": 3, "type": "branch", "children": [{"name": "TPU v4", "value": 3, "type": "leaf"}]}]}]}, {"name": "Jakob & Uszkoreit", "value": 5, "type": "branch", "children": [{"name": "Jakob & Uszkoreit", "value": 5, "type": "branch", "children": [{"name": "Jakob & Uszkoreit", "value": 5, "type": "branch", "children": [{"name": "Jakob Uszkoreit", "value": 9, "type": "leaf"}]}]}]}]};
+        
+        const width = Math.min(window.innerWidth - 60, 800);
+        const height = width;
+        const radius = width / 2;
+        
+        const color = d3.scaleOrdinal()
+            .domain(['root', 'branch', 'leaf'])
+            .range(['#ff6b6b', '#4ecdc4', '#45b7d1']);
+        
+        const partition = d3.partition()
+            .size([2 * Math.PI, radius]);
+        
+        const arc = d3.arc()
+            .startAngle(d => d.x0)
+            .endAngle(d => d.x1)
+            .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005))
+            .padRadius(radius / 2)
+            .innerRadius(d => d.y0)
+            .outerRadius(d => d.y1 - 1);
+        
+        const root = d3.hierarchy(data)
+            .sum(d => d.value)
+            .sort((a, b) => b.value - a.value);
+        
+        partition(root);
+        
+        const svg = d3.select('#sunburst-container')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
+            .append('g')
+            .attr('transform', `translate(${width / 2},${height / 2})`);
+        
+        const path = svg.selectAll('path')
+            .data(root.descendants())
+            .join('path')
+            .attr('fill', d => {
+                let current = d;
+                while (current.depth > 1) current = current.parent;
+                return d3.interpolateRainbow(current.x0 / (2 * Math.PI));
+            })
+            .attr('fill-opacity', d => 0.9 - d.depth * 0.15)
+            .attr('d', arc)
+            .style('cursor', 'pointer')
+            .on('mouseover', function(event, d) {
+                d3.select(this).attr('fill-opacity', 1);
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+                    <h3>${d.data.name}</h3>
+                    <p><strong>Type:</strong> ${d.data.type}</p>
+                    <p><strong>Entities:</strong> ${d.value}</p>
+                `;
+                tooltip.style.opacity = 1;
+                tooltip.style.left = (event.pageX + 15) + 'px';
+                tooltip.style.top = (event.pageY - 10) + 'px';
+            })
+            .on('mouseout', function(event, d) {
+                d3.select(this).attr('fill-opacity', 0.9 - d.depth * 0.15);
+                document.getElementById('tooltip').style.opacity = 0;
+            })
+            .on('click', clicked);
+        
+        const label = svg.selectAll('text')
+            .data(root.descendants().filter(d => d.depth && (d.y0 + d.y1) / 2 * (d.x1 - d.x0) > 10))
+            .join('text')
+            .attr('transform', d => {
+                const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+                const y = (d.y0 + d.y1) / 2;
+                return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+            })
+            .attr('dy', '0.35em')
+            .attr('text-anchor', 'middle')
+            .attr('fill', '#fff')
+            .attr('font-size', '10px')
+            .text(d => d.data.name.length > 10 ? d.data.name.substring(0, 10) + '...' : d.data.name);
+        
+        let currentFocus = root;
+        
+        function clicked(event, p) {
+            currentFocus = currentFocus === p ? p.parent || root : p;
+            
+            root.each(d => {
+                d.target = {
+                    x0: Math.max(0, Math.min(1, (d.x0 - currentFocus.x0) / (currentFocus.x1 - currentFocus.x0))) * 2 * Math.PI,
+                    x1: Math.max(0, Math.min(1, (d.x1 - currentFocus.x0) / (currentFocus.x1 - currentFocus.x0))) * 2 * Math.PI,
+                    y0: Math.max(0, d.y0 - currentFocus.y0),
+                    y1: Math.max(0, d.y1 - currentFocus.y0)
+                };
+            });
+            
+            const t = svg.transition().duration(750);
+            
+            path.transition(t)
+                .tween('data', d => {
+                    const i = d3.interpolate(d.current || d, d.target);
+                    return t => d.current = i(t);
+                })
+                .attrTween('d', d => () => arc(d.current));
+        }
+        
+        path.each(d => d.current = d);
+    </script>
+</body>
+</html>

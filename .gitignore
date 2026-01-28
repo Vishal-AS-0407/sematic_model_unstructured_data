@@ -1,0 +1,125 @@
+# ============================================
+# SemantiGraph .gitignore
+# ============================================
+# This .gitignore is configured to:
+# - KEEP: Code, results, visualizations, documentation
+# - IGNORE: Environment files, caches, large PDFs, temporary data
+# ============================================
+
+# -------- Python --------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# -------- Virtual Environments --------
+venv/
+ENV/
+env/
+.venv/
+
+# -------- IDE Settings --------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.claude/
+
+# -------- Environment Variables (IMPORTANT: Contains API keys!) --------
+.env
+*.local
+
+# -------- Logs --------
+*.log
+logs/
+
+# -------- OS Files --------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -------- Jupyter Notebooks --------
+.ipynb_checkpoints/
+
+# -------- Testing --------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# -------- Type Checking --------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ============================================
+# DATA DIRECTORIES
+# ============================================
+# We want to KEEP results but IGNORE large input files
+
+# -------- IGNORE: Large PDF files (user should download separately) --------
+data/pdfs/*.pdf
+
+# -------- IGNORE: Intermediate extraction files --------
+data/pdf_extracts/
+data/best_text_structures/
+data/json/
+
+# -------- IGNORE: Old archived files --------
+OLD_ARCHIVED_FILES/
+
+# ============================================
+# KEEP THESE (DO NOT IGNORE)
+# ============================================
+# The following are explicitly NOT ignored so they upload to GitHub:
+# 
+# ✅ showcase/ - All visualizations and results
+# ✅ comparison/ - Benchmark results and charts
+# ✅ data/best_kg/ - Knowledge graph files (if small enough)
+# ✅ data/best_semantic_models/ - Final semantic model output
+# ✅ modules/ - All Python modules
+# ✅ *.md - All documentation
+# ✅ *.py - All Python scripts
+# ✅ requirements.txt - Dependencies
+
+# -------- Keep directory structure (for empty dirs) --------
+!data/.gitkeep
+!data/pdfs/.gitkeep
+!showcase/.gitkeep
+
+# -------- Optional: Keep small data files for demo --------
+# Uncomment these if you want to include final results:
+# !data/best_semantic_models/semantic_model_best.json
+# !data/best_kg/enhanced_global_graph.json
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.backup
+temp/
+tmp/
+
+# -------- Exported requirements (large, auto-generated) --------
+requirements_exported.txt

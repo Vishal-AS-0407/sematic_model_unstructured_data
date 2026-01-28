@@ -1,0 +1,304 @@
+Transformer Attention Mechanism {'relations': 'based_on', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Transformer BLEU {'relations': 'improves', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 0.9}
+Transformer WMT 2014 English-to-German {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Transformer WMT 2014 English-to-French {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Transformer Self-Attention {'relations': 'is_based_on', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 0.95}
+Google Brain Ashish Vaswani {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Noam Shazeer {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Niki Parmar {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Jakob Uszkoreit {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Llion Jones {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Aidan N. Gomez {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Łukasz Kaiser {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Brain Illia Polosukhin {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Google Research Vision Transformer (ViT) {'relations': 'authored', 'mentions': 2, 'sources': 'deit,vision_transformer', 'confidence': 0.95}
+Google Research PaLM {'relations': 'developed', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+Jakob Uszkoreit Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Encoder Multi-Head Attention {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Decoder Multi-Head Attention {'relations': 'uses', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Multi-Head Attention Attention Function {'relations': 'is_a', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Scaled Dot-Product Attention Attention Function {'relations': 'is_a', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Residual Connection Encoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Residual Connection Decoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Layer Normalization Encoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Layer Normalization Decoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Feed-Forward Network Encoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Feed-Forward Network Decoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Softmax Function Decoder {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 1.0}
+Self-Attention Transformer {'relations': 'is_used_in', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.9}
+Positional Encoding Transformer {'relations': 'is_used_in', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 0.95}
+Positional Encoding Transformer-XL {'relations': 'is used in', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Positional Encoding Positional Encoding {'relations': 'extends', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Penn Treebank Wall Street Journal {'relations': 'contains', 'mentions': 1, 'sources': 'attention_is_all_you_need', 'confidence': 0.9}
+CLIP zero-shot transfer {'relations': 'achieves', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP WIT {'relations': 'uses', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP zero-shot learning {'relations': 'uses', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP cross_entropy_loss {'relations': 'is_trained_with', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP ImageNet {'relations': 'improves', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP ResNet-50 {'relations': 'matches_performance_of', 'mentions': 1, 'sources': 'clip', 'confidence': 0.8}
+CLIP Visual N-Grams {'relations': 'outperforms', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP YFCC100M {'relations': 'trained_on', 'mentions': 1, 'sources': 'clip', 'confidence': 0.8}
+CLIP Yahoo {'relations': 'reduces_errors_on', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+CLIP SUN {'relations': 'doubles_accuracy_on', 'mentions': 1, 'sources': 'clip', 'confidence': 0.85}
+CLIP visual feature Z {'relations': 'provides', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+GPT-3 OpenAI {'relations': 'developed_by', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 1.0}
+GPT-3 few-shot learning {'relations': 'applies_to', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 1.0}
+GPT-3 translation {'relations': 'achieves_performance_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 question-answering {'relations': 'achieves_performance_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 cloze tasks {'relations': 'achieves_performance_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 Natural Questions {'relations': 'evaluated_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 CoQA {'relations': 'evaluated_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 TriviaQA {'relations': 'evaluated_on', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 in-context learning {'relations': 'uses', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.95}
+GPT-3 V100 GPU {'relations': 'uses', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.9}
+GPT-3 task-specific fine-tuning {'relations': 'requires', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.8}
+GPT-3 CommonCrawl {'relations': 'is trained on', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.8}
+GPT-3 Common Crawl {'relations': 'uses', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.9}
+GPT-3 WebText {'relations': 'uses', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.85}
+GPT-3 Books1 {'relations': 'uses', 'mentions': 2, 'sources': 'gpt3,gpt3', 'confidence': 0.85}
+GPT-3 Wikipedia {'relations': 'uses', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.85}
+GPT-3 LLaMA-I {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+ImageNet ImageNet-21k {'relations': 'is_a_subset_of', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.85}
+ImageNet fine-tuning {'relations': 'used_for', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.9}
+ResNet-50 CLIP {'relations': 'matches accuracy of', 'mentions': 1, 'sources': 'clip', 'confidence': 0.85}
+OpenAI CLIP {'relations': 'developed', 'mentions': 1, 'sources': 'clip', 'confidence': 0.9}
+OpenAI Johns Hopkins University {'relations': 'associated_with', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.7}
+OpenAI GPT-3 {'relations': 'developed', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.9}
+zero-shot transfer meta-learning {'relations': 'is_a', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.9}
+EfficientNet ResNet-101 {'relations': 'is_related_to', 'mentions': 1, 'sources': 'clip', 'confidence': 0.6}
+WebText Common Crawl {'relations': 'augments', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.85}
+ResNet-101 Vision Transformer (ViT) {'relations': 'is compared_with,is_compared_with', 'mentions': 2, 'sources': 'deit,reformer', 'confidence': 0.9}
+ResNet-101 ViT {'relations': 'is_used_as_baseline_for', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.8}
+ResNet-101 Transformer {'relations': 'applies_before', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.7}
+Vision Transformer (ViT) Transformer {'relations': 'is based_on,is_based_on', 'mentions': 2, 'sources': 'deit,reformer', 'confidence': 0.95}
+Vision Transformer (ViT) ImageNet-21k {'relations': 'is trained_on,is_pretrained_on', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.85}
+Vision Transformer (ViT) JFT-300M {'relations': 'is trained_on,is_pretrained_on', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.85}
+Vision Transformer (ViT) ImageNet {'relations': 'is evaluated_on', 'mentions': 2, 'sources': 'deit,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) CIFAR-10 {'relations': 'is evaluated_on', 'mentions': 2, 'sources': 'deit,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) VTAB {'relations': 'is evaluated_on', 'mentions': 2, 'sources': 'deit,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) Transformer Encoder {'relations': 'is_based_on', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) MLP Head {'relations': 'uses', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) ResNet-101 {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'deit', 'confidence': 0.8}
+Vision Transformer (ViT) self-attention {'relations': 'uses', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.9}
+Vision Transformer (ViT) Transformers {'relations': 'is based_on', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.95}
+Visual N-Grams CLIP {'relations': 'compares_to', 'mentions': 1, 'sources': 'clip', 'confidence': 0.85}
+Visual N-Grams Elhoseiny et al. (2013) {'relations': 'dates_back_to', 'mentions': 1, 'sources': 'clip', 'confidence': 0.7}
+Alexey Dosovitskiy Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Lucas Beyer Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Alexander Kolesnikov Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Dirk Weissenborn Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Xiaohua Zhai Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Thomas Unterthiner Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Mostafa Dehghani Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Matthias Minderer Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Georg Heigold Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Sylvain Gelly Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+Neil Houlsby Vision Transformer (ViT) {'relations': 'is a co-author of', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+ImageNet-21k ILSVRC-2012 ImageNet {'relations': 'is_a_superset_of', 'mentions': 2, 'sources': 'deit,vision_transformer', 'confidence': 0.9}
+ImageNet-21k ImageNet {'relations': 'is_a_superset_of', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.85}
+ImageNet-21k pre-training {'relations': 'used_for', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.95}
+Transformer Encoder Vaswani et al. (2017) {'relations': 'is_inspired_by', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.9}
+Position Embeddings Longformer {'relations': 'supports', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+Self-Supervised Learning Vision Transformer (ViT) {'relations': 'is_used_in,is_applied_to', 'mentions': 2, 'sources': 'deit,reformer', 'confidence': 0.8}
+Vaswani et al. (2017) Transformer architecture {'relations': 'introduces,proposed,introduced', 'mentions': 5, 'sources': 'deit,transformer_xl,transformer_xl,transformer_xl,vision_transformer', 'confidence': 0.95}
+ILSVRC-2012 ImageNet ImageNet-21k {'relations': 'is_a_subset_of', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.9}
+ViT-Base BERT {'relations': 'is_based_on', 'mentions': 3, 'sources': 'deit,reformer,vision_transformer', 'confidence': 0.9}
+ViT-Large BERT {'relations': 'is_based_on', 'mentions': 6, 'sources': 'deit,deit,reformer,reformer,vision_transformer,vision_transformer', 'confidence': 0.9}
+SGD fine-tuning {'relations': 'is_used_for', 'mentions': 2, 'sources': 'deit,reformer', 'confidence': 0.95}
+Noisy Student ViT-H/14 {'relations': 'is_compared_with,is_compared_to', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.85}
+Big Transfer (BiT) ViT-H/14 {'relations': 'is_compared_with,is_compared_to', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.85}
+ViT-L/16 Big Transfer (BiT) {'relations': 'compares_to', 'mentions': 1, 'sources': 'deit', 'confidence': 0.9}
+ViT-L/16 ImageNet-21k {'relations': 'pre_trained_on,is_pretrained_on', 'mentions': 4, 'sources': 'deit,reformer,vision_transformer,vision_transformer', 'confidence': 0.9}
+ViT-L/16 TPUv3 {'relations': 'trained_using', 'mentions': 2, 'sources': 'deit,reformer', 'confidence': 0.8}
+ViT-L/16 JFT-300M {'relations': 'is_pretrained_on', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.8}
+ViT-L/16 VTAB {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.8}
+BiT ViT {'relations': 'compared_to', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.75}
+ViT-H/14 Noisy Student {'relations': 'compares_to', 'mentions': 1, 'sources': 'deit', 'confidence': 0.9}
+ViT-H/14 BiT {'relations': 'outperforms', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.9}
+Hybrid models ViT {'relations': 'outperform', 'mentions': 1, 'sources': 'deit', 'confidence': 0.6}
+self-attention Swin Transformer {'relations': 'is_used_in', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+CNN Vision Transformer (ViT) {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.8}
+self-supervised pre-training accuracy {'relations': 'improves', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.85}
+NLP language tasks {'relations': 'contains', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.9}
+NLP few-shot learning {'relations': 'contains', 'mentions': 1, 'sources': 'gpt3', 'confidence': 1.0}
+few-shot learning meta-learning {'relations': 'is_a', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3_language_models', 'confidence': 0.9}
+pre-training fine-tuning {'relations': 'followed_by', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.9}
+pre-training Vision Transformer (ViT) {'relations': 'is_applied_to', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.85}
+fine-tuning Vision Transformer (ViT) {'relations': 'is_applied_to', 'mentions': 1, 'sources': 'reformer', 'confidence': 0.85}
+Common Crawl GPT-3 {'relations': 'used_for_training', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.95}
+societal impacts GPT-3 {'relations': 'discussed_in', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.9}
+in-context learning meta-learning {'relations': 'is_a', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3', 'confidence': 0.95}
+RWC+19 in-context learning {'relations': 'discusses', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.8}
+Books1 Common Crawl {'relations': 'augments', 'mentions': 2, 'sources': 'gpt3_language_models,gpt3_language_models', 'confidence': 0.85}
+Wikipedia Common Crawl {'relations': 'augments', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.85}
+Sparse Transformer Transformer architecture {'relations': 'extends', 'mentions': 1, 'sources': 'gpt3_language_models', 'confidence': 0.8}
+Validation loss GPT-3 {'relations': 'is_measured_for', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.9}
+K few-shot learning {'relations': 'is_used_in', 'mentions': 1, 'sources': 'gpt3', 'confidence': 0.8}
+LLaMA-I GPT-3 {'relations': 'outperforms,compares_with', 'mentions': 2, 'sources': 'llama,llama', 'confidence': 0.9}
+LLaMA-I Chinchilla {'relations': 'is_competitive_with,compares_with', 'mentions': 2, 'sources': 'llama,llama', 'confidence': 0.9}
+LLaMA-I PaLM {'relations': 'is_competitive_with,compares_with', 'mentions': 2, 'sources': 'llama,llama', 'confidence': 0.9}
+LLaMA-I CommonCrawl {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I C4 {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Github {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Wikipedia {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Books {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I ArXiv {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I StackExchange {'relations': 'trained_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Transformer Architecture {'relations': 'uses', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Performance Metrics {'relations': 'evaluated_by', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I Gopher {'relations': 'compares_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I OPT {'relations': 'compares_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I OPT-IML {'relations': 'compares_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.8}
+LLaMA-I LaMDA {'relations': 'compares_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.8}
+LLaMA-I Natural Questions {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I TriviaQA {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I MATH {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I GSM8k {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I RACE {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I BoolQ {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.8}
+LLaMA-I Flan-PaLM {'relations': 'evaluates_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.8}
+LLaMA-I Exact Match {'relations': 'achieves_performance', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-I pass@ {'relations': 'achieves_performance', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+Chinchilla LLaMA-I {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+PaLM LLaMA-I {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+PaLM Transformer {'relations': 'is_based_on,based_on', 'mentions': 2, 'sources': 'palm,palm', 'confidence': 0.95}
+PaLM Pathways {'relations': 'uses,is based_on', 'mentions': 2, 'sources': 'palm,palm', 'confidence': 0.9}
+PaLM TPUv4 {'relations': 'trained_on', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+PaLM GPT-3 {'relations': 'outperforms', 'mentions': 1, 'sources': 'palm', 'confidence': 0.8}
+PaLM BIG-bench {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+PaLM SwiGLU {'relations': 'uses', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+PaLM RoPE {'relations': 'uses', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+PaLM SentencePiece {'relations': 'uses', 'mentions': 1, 'sources': 'palm', 'confidence': 0.85}
+PaLM WinoGender {'relations': 'evaluates', 'mentions': 1, 'sources': 'palm', 'confidence': 0.8}
+PaLM 540B parameters {'relations': 'has_model_scale', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+PaLM 62B parameters {'relations': 'has_model_scale', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+PaLM 8B parameters {'relations': 'has_model_scale', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+PaLM 780 billion tokens {'relations': 'trained_on', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+PaLM JAX {'relations': 'trained_using', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+PaLM T5X {'relations': 'trained_using', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+Transformer Architecture Vaswani et al. (2017) {'relations': 'is_based_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+Gopher LLaMA-I {'relations': 'is_compared_with', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+Gopher GPT-3 {'relations': 'outperforms', 'mentions': 1, 'sources': 'llama', 'confidence': 0.85}
+LLaMA-65B Chinchilla {'relations': 'outperforms', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-65B PaLM {'relations': 'outperforms', 'mentions': 1, 'sources': 'llama', 'confidence': 0.9}
+LLaMA-65B RealToxicityPrompts {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'llama', 'confidence': 0.7}
+Zhang et al. (2022) Hoffmann et al. (2022) {'relations': 'cites', 'mentions': 1, 'sources': 'llama', 'confidence': 0.8}
+Perplexity Transformer-XL {'relations': 'is reduced by', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Longformer self-attention {'relations': 'improves', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer RoBERTa {'relations': 'outperforms,improves,is_based_on', 'mentions': 3, 'sources': 'longformer,longformer,longformer', 'confidence': 0.95}
+Longformer text8 {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer enwik8 {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer WikiHop {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+Longformer TriviaQA {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+Longformer LED {'relations': 'used_in', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.8}
+Longformer Transformer architecture {'relations': 'based_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer Sparse Transformer {'relations': 'compared_to', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.8}
+Longformer Transformer {'relations': 'is_based_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.95}
+Longformer Attention Pattern {'relations': 'uses', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+Longformer Position Embeddings {'relations': 'uses', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+Longformer MLM {'relations': 'is_pretrained_with', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer BERT {'relations': 'compared_with', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+enwik8 text8 {'relations': 'is compared with', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.7}
+Transformer-XL Longformer {'relations': 'compared_to', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.75}
+Transformer-XL long-term dependency {'relations': 'improves', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Transformer-XL context fragmentation {'relations': 'resolves', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+Transformer-XL Positional Encoding {'relations': 'uses', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.95}
+Transformer-XL Perplexity {'relations': 'improves', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Transformer-XL AWD-LSTM {'relations': 'compared_with', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+Transformer-XL One Billion Word {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.8}
+Transformer-XL WikiText-103 {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.8}
+BlockSparse TensorFlow {'relations': 'is_designed_for', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.8}
+LED Longformer {'relations': 'is_a_variant_of', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.95}
+CPC loss pre-training {'relations': 'is_used_for', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+BigBird ETC {'relations': 'is_an_extension_of', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Ye et al. (2019) BP-Transformer {'relations': 'discusses', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+BERT T5 {'relations': 'is_related_to', 'mentions': 1, 'sources': 'palm', 'confidence': 0.7}
+Adaptive Span Longformer {'relations': 'compared_to', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.7}
+Compressive Transformer Longformer {'relations': 'compared_to', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.7}
+Ott et al. fairseq {'relations': 'developed', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Devlin et al. BERT {'relations': 'developed', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Liu et al. RoBERTa {'relations': 'developed', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Rae et al. Compressive Transformer {'relations': 'discussed', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.8}
+Longformer-large RoBERTa-large {'relations': 'improves', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Longformer-large WikiHop {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.95}
+Longformer-large TriviaQA {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.95}
+Longformer-large HotpotQA {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.95}
+Longformer-large coreference resolution {'relations': 'used_for', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.85}
+OntoNotes coreference resolution {'relations': 'used_for', 'mentions': 1, 'sources': 'longformer', 'confidence': 0.9}
+Transformer architecture GPT-3 {'relations': 'is used in', 'mentions': 1, 'sources': 'palm', 'confidence': 0.95}
+780 billion tokens GitHub {'relations': 'composed_of', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+780 billion tokens Wikipedia {'relations': 'composed_of', 'mentions': 1, 'sources': 'palm', 'confidence': 1.0}
+Pathways system TPU v4 {'relations': 'uses', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+Pathways system JAX/XLA {'relations': 'executes', 'mentions': 1, 'sources': 'palm', 'confidence': 0.9}
+LLaVA GPT-3 {'relations': 'is_based_on,compared_to,is evaluated by', 'mentions': 3, 'sources': 'segment_anything,segment_anything,segment_anything', 'confidence': 1.0}
+LLaVA CLIP {'relations': 'connects,uses', 'mentions': 2, 'sources': 'segment_anything,segment_anything', 'confidence': 0.9}
+LLaVA Vicuna {'relations': 'connects,is based on', 'mentions': 2, 'sources': 'segment_anything,segment_anything', 'confidence': 0.8}
+LLaVA Science QA {'relations': 'is_evaluated_on,is_fine_tuned_on', 'mentions': 2, 'sources': 'segment_anything,segment_anything', 'confidence': 0.9}
+LLaVA multi-turn conversation data {'relations': 'is trained on', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+LLaVA Flamingo {'relations': 'compares to', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.6}
+LLaVA BLIP-2 {'relations': 'compares to,compared_to,compares_with', 'mentions': 3, 'sources': 'segment_anything,segment_anything,segment_anything', 'confidence': 1.0}
+LLaVA OpenFlamingo {'relations': 'compared_to,compares_with', 'mentions': 2, 'sources': 'segment_anything,segment_anything', 'confidence': 1.0}
+LLaVA LLaVA-Bench {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.95}
+LLaVA instruction-following capability {'relations': 'improves', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+LLaVA-Bench COCO-Val-2014 {'relations': 'uses', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+BLIP-2 LMM {'relations': 'is_a', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+FROMAGe LMM {'relations': 'is_a', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+KOSMOS-1 LMM {'relations': 'is_a', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+PaLM-E LMM {'relations': 'is_a', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.9}
+OpenFlamingo LLaMA-I {'relations': 'is_based_on', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.8}
+LLaMA-Adapter LLaMA-I {'relations': 'is_based_on', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.8}
+visual feature Z language embedding tokens H {'relations': 'is converted to', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.8}
+projection matrix W visual feature Z {'relations': 'connects', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.85}
+multi-turn conversation data instruction tokens X {'relations': 'contains', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.8}
+multi-turn conversation data assistant answers X {'relations': 'contains', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 0.8}
+evaluation metric instruction-following capability {'relations': 'measures', 'mentions': 1, 'sources': 'segment_anything', 'confidence': 1.0}
+Swin Transformer ViT/DeiT {'relations': 'outperforms', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer DetectoRS {'relations': 'outperforms', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer SETR {'relations': 'outperforms', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer ResNet-50 {'relations': 'is similar to', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.75}
+Swin Transformer ResNet-101 {'relations': 'is similar to', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.75}
+Swin Transformer ImageNet-21k {'relations': 'evaluated_on', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer DeiT {'relations': 'compared_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer EfficientNet {'relations': 'compared_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+Swin Transformer RegNet {'relations': 'compared_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+Swin Transformer AdamW {'relations': 'uses', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer Relative Position Bias {'relations': 'contains', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.85}
+Swin Transformer Top-1 Accuracy {'relations': 'achieves', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer FLOPs {'relations': 'has', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin Transformer HTC++ {'relations': 'uses', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Microsoft Research Asia Ze Liu {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Yutong Lin {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Yue Cao {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Han Hu {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Yixuan Wei {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Zheng Zhang {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Stephen Lin {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+Microsoft Research Asia Baining Guo {'relations': 'affiliated_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 1.0}
+feature pyramid networks (FPN) Swin Transformer {'relations': 'is_used_in', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+U-Net Swin Transformer {'relations': 'is_used_in', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+ViT Transformer architecture {'relations': 'is based on', 'mentions': 1, 'sources': 'deit', 'confidence': 0.95}
+ViT JFT-300M {'relations': 'pre_trained_on,requires', 'mentions': 3, 'sources': 'reformer,swin_transformer,vision_transformer', 'confidence': 0.9}
+ViT weight decay {'relations': 'optimized_with', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.7}
+ViT dropout {'relations': 'optimized_with', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.7}
+ViT label smoothing {'relations': 'optimized_with', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.7}
+Stage 1 Stage 1 {'relations': 'is followed by', 'mentions': 3, 'sources': 'swin_transformer,swin_transformer,swin_transformer', 'confidence': 0.95}
+Swin-T ImageNet-21k {'relations': 'fine-tuned_on', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.9}
+Swin-T ViT {'relations': 'compared_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+Swin-T DeiT-S {'relations': 'compared_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.8}
+Cascade Mask R-CNN Swin-T {'relations': 'used_with', 'mentions': 1, 'sources': 'swin_transformer', 'confidence': 0.85}
+LSTM Transformer-XL {'relations': 'is compared to', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.8}
+RNN Transformer-XL {'relations': 'is compared to,compared_to', 'mentions': 2, 'sources': 'transformer_xl,transformer_xl', 'confidence': 0.8}
+SG function Transformer-XL {'relations': 'is used in', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+hidden state Transformer-XL {'relations': 'are_cached_in', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+long-term dependency Transformer-XL {'relations': 'is modeled by', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.8}
+BPTT RNN {'relations': 'is_based_on', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+query vector key vector {'relations': 'attends_on', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+Shaw et al. (2018) Transformer-XL {'relations': 'compares_with', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.7}
+Huang et al. (2018) Positional Encoding {'relations': 'uses', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.75}
+absolute positional embedding absolute positional embedding {'relations': 'is replaced by', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.8}
+u query vector {'relations': 'replaces', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+v query vector {'relations': 'substitutes', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.85}
+Khandelwal et al. (2018) Effective Context Length (ECL) {'relations': 'proposed', 'mentions': 1, 'sources': 'transformer_xl', 'confidence': 0.9}
+Self-Supervision Vision Transformer {'relations': 'is_explored_for', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.8}
+hybrids ViT {'relations': 'outperform', 'mentions': 2, 'sources': 'reformer,vision_transformer', 'confidence': 0.6}
+position embeddings 2D image topology {'relations': 'represent', 'mentions': 1, 'sources': 'vision_transformer', 'confidence': 0.8}

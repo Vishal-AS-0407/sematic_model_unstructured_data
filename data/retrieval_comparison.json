@@ -1,0 +1,44 @@
+[
+  {
+    "query": "How does Vision Transformer work?",
+    "old_entities": [],
+    "old_count": 0,
+    "new_entities": [
+      "Vision Transformer (ViT)",
+      "Swin Transformer",
+      "Vision Transformer",
+      "ViT-Large",
+      "ImageNet-21k"
+    ],
+    "new_count": 10,
+    "new_relationships": 15
+  },
+  {
+    "query": "What is self-attention mechanism?",
+    "old_entities": [],
+    "old_count": 0,
+    "new_entities": [
+      "Vision Transformer (ViT)",
+      "self-attention",
+      "Self-Attention",
+      "Attention Mechanism",
+      "Relative Position Bias"
+    ],
+    "new_count": 10,
+    "new_relationships": 15
+  },
+  {
+    "query": "GPT-3 training data and architecture",
+    "old_entities": [],
+    "old_count": 0,
+    "new_entities": [
+      "GPT-3",
+      "Vision Transformer (ViT)",
+      "Transformer architecture",
+      "Alpaca",
+      "WebText"
+    ],
+    "new_count": 10,
+    "new_relationships": 15
+  }
+]

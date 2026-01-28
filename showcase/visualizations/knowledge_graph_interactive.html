@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a2a4e 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+        }
+        .header {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+        .filter-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #e8e8e8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(240, 147, 251, 0.3);
+            border-color: #f093fb;
+        }
+        #graph-container {
+            width: 100%;
+            height: calc(100vh - 60px);
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(30, 20, 50, 0.95);
+            border: 1px solid rgba(240, 147, 251, 0.3);
+            border-radius: 10px;
+            padding: 12px;
+            max-width: 280px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            pointer-events: none;
+            opacity: 0;
+            z-index: 1000;
+        }
+        .tooltip h3 { color: #f093fb; margin-bottom: 6px; font-size: 14px; }
+        .tooltip p { font-size: 11px; color: #a0a0a0; margin: 4px 0; }
+        .tooltip .type-badge {
+            display: inline-block;
+            background: rgba(245, 87, 108, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            color: #ffb3c1;
+        }
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(30, 20, 50, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .legend-title { font-size: 14px; margin-bottom: 10px; color: #f093fb; }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 4px 0;
+            font-size: 11px;
+        }
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 Knowledge Graph</h1>
+        <div class="filters">
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="hardware">hardware</button> <button class="filter-btn" data-type="architecture">architecture</button> <button class="filter-btn" data-type="training method">training method</button> <button class="filter-btn" data-type="method">method</button> <button class="filter-btn" data-type="Function">Function</button> <button class="filter-btn" data-type="person">person</button> <button class="filter-btn" data-type="resource">resource</button> <button class="filter-btn" data-type="Method">Method</button>
+        </div>
+    </div>
+    <div id="graph-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+    <div class="legend">
+        <div class="legend-title">Entity Types</div>
+        <div class="legend-item"><div class="legend-color" style="background: hsl(0, 70%, 60%);"></div>hardware</div> <div class="legend-item"><div class="legend-color" style="background: hsl(18, 70%, 60%);"></div>architecture</div> <div class="legend-item"><div class="legend-color" style="background: hsl(37, 70%, 60%);"></div>training method</div> <div class="legend-item"><div class="legend-color" style="background: hsl(56, 70%, 60%);"></div>method</div> <div class="legend-item"><div class="legend-color" style="background: hsl(75, 70%, 60%);"></div>Function</div> <div class="legend-item"><div class="legend-color" style="background: hsl(94, 70%, 60%);"></div>person</div> <div class="legend-item"><div class="legend-color" style="background: hsl(113, 70%, 60%);"></div>resource</div> <div class="legend-item"><div class="legend-color" style="background: hsl(132, 70%, 60%);"></div>Method</div> <div class="legend-item"><div class="legend-color" style="background: hsl(151, 70%, 60%);"></div>organization</div> <div class="legend-item"><div class="legend-color" style="background: hsl(170, 70%, 60%);"></div>data type</div> <div class="legend-item"><div class="legend-color" style="background: hsl(189, 70%, 60%);"></div>publication</div> <div class="legend-item"><div class="legend-color" style="background: hsl(208, 70%, 60%);"></div>people</div> <div class="legend-item"><div class="legend-color" style="background: hsl(227, 70%, 60%);"></div>metric</div> <div class="legend-item"><div class="legend-color" style="background: hsl(246, 70%, 60%);"></div>dataset</div> <div class="legend-item"><div class="legend-color" style="background: hsl(265, 70%, 60%);"></div>task</div> <div class="legend-item"><div class="legend-color" style="background: hsl(284, 70%, 60%);"></div>architecture component</div> <div class="legend-item"><div class="legend-color" style="background: hsl(303, 70%, 60%);"></div>Architecture</div> <div class="legend-item"><div class="legend-color" style="background: hsl(322, 70%, 60%);"></div>Metric</div> <div class="legend-item"><div class="legend-color" style="background: hsl(341, 70%, 60%);"></div>model</div>
+    </div>
+    <script>
+        const nodes = [{"id": "Transformer", "type": "architecture", "importance": 0.3332547445162759, "description": "A new network architecture based solely on attention mechanisms, dispensing with recurrence and conv", "community": 0}, {"id": "Attention Mechanism", "type": "method", "importance": 0.030448058037685938, "description": "A mechanism that allows modeling of dependencies without regard to their distance in input or output", "community": 0}, {"id": "BLEU", "type": "metric", "importance": 0.08044805803768593, "description": "A metric for evaluating the quality of machine translation by comparing a machine's output with a re", "community": 0}, {"id": "WMT 2014 English-to-German", "type": "dataset", "importance": 0.05544805803768593, "description": "A dataset used for evaluating machine translation performance.", "community": 0}, {"id": "WMT 2014 English-to-French", "type": "dataset", "importance": 0.05544805803768593, "description": "A dataset used for evaluating machine translation performance.", "community": 0}, {"id": "Google Brain", "type": "organization", "importance": 0.06550119187860652, "description": "A deep learning research team at Google.", "community": 1}, {"id": "Google Research", "type": "organization", "importance": 0.1369031734278509, "description": "A research division of Google focusing on various scientific and technological advancements.", "community": 2}, {"id": "Ashish Vaswani", "type": "person", "importance": 0.0566681000466778, "description": "One of the authors who designed and implemented the first Transformer models.", "community": 1}, {"id": "Noam Shazeer", "type": "person", "importance": 0.0566681000466778, "description": "One of the authors who proposed scaled dot-product attention and multi-head attention.", "community": 1}, {"id": "Niki Parmar", "type": "person", "importance": 0.0066681000466778, "description": "One of the authors involved in the design and implementation of the Transformer.", "community": 1}, {"id": "Jakob Uszkoreit", "type": "person", "importance": 0.09959312814476012, "description": "One of the authors who proposed replacing RNNs with self-attention.", "community": 1}, {"id": "Llion Jones", "type": "person", "importance": 0.0066681000466778, "description": "One of the authors responsible for the initial codebase and efficient inference.", "community": 1}, {"id": "Aidan N. Gomez", "type": "person", "importance": 0.0066681000466778, "description": "One of the authors involved in designing various parts of the Tensor2Tensor framework.", "community": 1}, {"id": "\u0141ukasz Kaiser", "type": "person", "importance": 0.0066681000466778, "description": "One of the authors who contributed to the design and implementation of Tensor2Tensor.", "community": 1}, {"id": "Illia Polosukhin", "type": "person", "importance": 0.0066681000466778, "description": "One of the authors who contributed to the design and implementation of the Transformer.", "community": 1}, {"id": "Encoder", "type": "Architecture", "importance": 0.03804024617157851, "description": "A component of the model composed of a stack of identical layers with multi-head self-attention and ", "community": 3}, {"id": "Decoder", "type": "Architecture", "importance": 0.055335894156931936, "description": "A component of the model that generates output sequences, incorporating attention mechanisms over en", "community": 3}, {"id": "Multi-Head Attention", "type": "Method", "importance": 0.08162044490822758, "description": "An attention mechanism that allows the model to jointly attend to information from different represe", "community": 3}, {"id": "Scaled Dot-Product Attention", "type": "Method", "importance": 0.004838709677419354, "description": "An attention function that computes a weighted sum of values based on the compatibility of queries a", "community": 3}, {"id": "Residual Connection", "type": "Method", "importance": 0.009677419354838708, "description": "A technique used to facilitate training by allowing gradients to flow through the network more easil", "community": 3}, {"id": "Layer Normalization", "type": "Method", "importance": 0.009677419354838708, "description": "A normalization technique applied to the outputs of sub-layers to stabilize and accelerate training.", "community": 3}, {"id": "Feed-Forward Network", "type": "Method", "importance": 0.009677419354838708, "description": "A fully connected network applied to each position separately in the encoder and decoder.", "community": 3}, {"id": "Embedding Layer", "type": "Architecture", "importance": 0.0, "description": "A layer that converts input tokens and output tokens into vector representations.", "community": 4}, {"id": "Softmax Function", "type": "Method", "importance": 0.004838709677419354, "description": "A function used to convert decoder outputs into predicted next-token probabilities.", "community": 3}, {"id": "Attention Function", "type": "Method", "importance": 0.09131554270345918, "description": "A function that maps queries and key-value pairs to an output.", "community": 3}, {"id": "ReLU Activation", "type": "Method", "importance": 0.0, "description": "An activation function used in feed-forward networks.", "community": 5}, {"id": "Attention(Q, K, V)", "type": "Function", "importance": 0.0, "description": "The mathematical representation of the attention mechanism.", "community": 6}, {"id": "d_model", "type": "Metric", "importance": 0.0, "description": "The dimensionality of the model's representations.", "community": 7}, {"id": "n", "type": "Metric", "importance": 0.0, "description": "The sequence length.", "community": 8}, {"id": "k", "type": "Metric", "importance": 0.0, "description": "The kernel size of convolutions.", "community": 9}, {"id": "r", "type": "Metric", "importance": 0.0, "description": "The size of the neighborhood in restricted self-attention.", "community": 10}, {"id": "Self-Attention", "type": "method", "importance": 0.060286767715105286, "description": "A mechanism that allows the model to weigh the importance of different tokens in a sequence.", "community": 0}, {"id": "Recurrent Neural Network (RNN)", "type": "architecture", "importance": 0.0, "description": "A type of neural network designed for sequential data processing.", "community": 11}, {"id": "Convolutional Neural Network (CNN)", "type": "architecture", "importance": 0.049999999999999996, "description": "A type of neural network primarily used for processing grid-like data such as images.", "community": 12}, {"id": "Positional Encoding", "type": "method", "importance": 0.14212584158157684, "description": "A technique used to inject information about the position of tokens in a sequence.", "community": 0}, {"id": "Adam Optimizer", "type": "method", "importance": 0.0, "description": "An optimization algorithm used for training machine learning models.", "community": 13}, {"id": "BLEU Score", "type": "metric", "importance": 0.0, "description": "A metric for evaluating the quality of text which has been machine-translated.", "community": 14}, {"id": "Byte-Pair Encoding", "type": "method", "importance": 0.0, "description": "A data compression technique used for encoding text.", "community": 15}, {"id": "Word-Piece Vocabulary", "type": "method", "importance": 0.0, "description": "A subword tokenization method used in natural language processing.", "community": 16}, {"id": "Residual Dropout", "type": "method", "importance": 0.0, "description": "A regularization technique applied to neural networks.", "community": 17}, {"id": "Label Smoothing", "type": "method", "importance": 0.0, "description": "A technique used during training to prevent overfitting by softening the target labels.", "community": 18}, {"id": "Separable Convolutions", "type": "method", "importance": 0.0, "description": "A type of convolution that reduces the computational complexity of standard convolutions.", "community": 19}, {"id": "NVIDIA P100 GPU", "type": "hardware", "importance": 0.0, "description": "A type of graphics processing unit used for training deep learning models.", "community": 20}, {"id": "ConvS2SEnsemble", "type": "model", "importance": 0.0, "description": "An ensemble model used for machine translation.", "community": 21}, {"id": "WMT2014", "type": "dataset", "importance": 0.024999999999999998, "description": "A benchmark dataset for machine translation tasks.", "community": 22}, {"id": "P100 GPUs", "type": "hardware", "importance": 0.0, "description": "A type of GPU used for training the models.", "community": 23}, {"id": "Penn Treebank", "type": "dataset", "importance": 0.02983870967741935, "description": "A dataset used for English constituency parsing.", "community": 24}, {"id": "Wall Street Journal", "type": "dataset", "importance": 0.01722051862198086, "description": "A portion of the Penn Treebank used for training.", "community": 24}, {"id": "Beam Search", "type": "method", "importance": 0.0, "description": "A search algorithm used during inference to generate translations.", "community": 25}, {"id": "Attention Heads", "type": "architecture component", "importance": 0.0, "description": "Components of the Transformer that allow it to focus on different parts of the input.", "community": 26}, {"id": "Semi-supervised Setting", "type": "training method", "importance": 0.0, "description": "A training approach that uses both labeled and unlabeled data.", "community": 27}, {"id": "Vinyals & Kaiser (2014)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 28}, {"id": "Dyer et al. (2016)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 29}, {"id": "Zhu et al. (2013)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 30}, {"id": "Huang & Harper (2009)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 31}, {"id": "McClosky et al. (2006)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 32}, {"id": "Luong et al. (2015)", "type": "publication", "importance": 0.0, "description": "A reference for previous work in English constituency parsing.", "community": 33}, {"id": "attention-based models", "type": "method", "importance": 0.0, "description": "Models that use attention mechanisms to improve performance in tasks like translation.", "community": 34}, {"id": "images", "type": "data type", "importance": 0.0, "description": "Visual data type that the authors plan to apply their models to.", "community": 35}, {"id": "audio", "type": "data type", "importance": 0.0, "description": "Sound data type that the authors plan to apply their models to.", "community": 36}, {"id": "video", "type": "data type", "importance": 0.0, "description": "Moving visual data type that the authors plan to apply their models to.", "community": 37}, {"id": "local, restricted attention mechanisms", "type": "method", "importance": 0.0, "description": "Attention mechanisms designed to efficiently handle large inputs and outputs.", "community": 38}, {"id": "code repository", "type": "resource", "importance": 0.0, "description": "GitHub repository for the code used to train and evaluate models.", "community": 39}, {"id": "Nal Kalchbrenner", "type": "person", "importance": 0.0, "description": "Researcher acknowledged for comments and inspiration.", "community": 40}, {"id": "Stephan Gouws", "type": "person", "importance": 0.0, "description": "Researcher acknowledged for comments and inspiration.", "community": 41}, {"id": "CLIP", "type": "model", "importance": 0.22870840935667666, "description": "A model that jointly trains an image encoder and a text encoder to predict correct pairings of image", "community": 54}, {"id": "GPT-3", "type": "model", "importance": 0.8629572421542531, "description": "A state-of-the-art language model that is competitive across many tasks.", "community": 43}, {"id": "ImageNet", "type": "dataset", "importance": 0.24915937681035638, "description": "A large dataset used for image classification tasks.", "community": 44}, {"id": "YFCC100M", "type": "dataset", "importance": 0.012173733757226562, "description": "A dataset containing images and associated metadata used for training models.", "community": 54}, {"id": "ResNet-50", "type": "model", "importance": 0.07132826856004751, "description": "A convolutional neural network architecture used for image classification.", "community": 54}, {"id": "VirTex", "type": "model", "importance": 0.0, "description": "A model that uses natural language supervision for image representation learning.", "community": 45}, {"id": "ICMLM", "type": "model", "importance": 0.0, "description": "A model that employs masked language modeling for learning image representations.", "community": 46}, {"id": "ConVIRT", "type": "model", "importance": 0.0, "description": "A model that uses contrastive objectives to learn image representations from text.", "community": 47}, {"id": "Dai & Le", "type": "people", "importance": 0.0, "description": "Researchers who contributed to advancements in pre-training methods in NLP.", "community": 48}, {"id": "Peters et al.", "type": "people", "importance": 0.0, "description": "Researchers who contributed to advancements in pre-training methods in NLP.", "community": 49}, {"id": "OpenAI", "type": "organization", "importance": 0.166072701867788, "description": "The organization behind the development of CLIP and other AI models.", "community": 54}, {"id": "400 million (image, text) pairs", "type": "dataset", "importance": 0.0, "description": "A dataset used for training the model, consisting of image and text pairs collected from the interne", "community": 50}, {"id": "OCR", "type": "task", "importance": 0.0, "description": "Optical Character Recognition, a task in computer vision.", "community": 51}, {"id": "geo-localization", "type": "task", "importance": 0.0, "description": "A task in computer vision that involves determining the geographic location of an image.", "community": 52}, {"id": "fine-grained object classification", "type": "task", "importance": 0.0, "description": "A task in computer vision that involves classifying objects into very specific categories.", "community": 53}, {"id": "zero-shot transfer", "type": "method", "importance": 0.044206869305222815, "description": "A method that allows a model to perform tasks without specific training on those tasks.", "community": 54}, {"id": "JFT-300M", "type": "dataset", "importance": 0.17094544616896928, "description": "A dataset with noisy labels used for training models.", "community": 44}, {"id": "MS-COCO", "type": "dataset", "importance": 0.0, "description": "A high-quality crowd-labeled dataset for image captioning and object detection.", "community": 55}, {"id": "Visual Genome", "type": "dataset", "importance": 0.0, "description": "A dataset containing images and their associated descriptions.", "community": 56}, {"id": "GPT", "type": "architecture", "importance": 0.024999999999999998, "description": "Generative Pre-trained Transformer, a family of language models.", "community": 57}, {"id": "Li et al. (2017)", "type": "person", "importance": 0.0, "description": "Researchers who achieved 11.5% accuracy on ImageNet in a zero-shot setting.", "community": 58}, {"id": "Xie et al. (2020)", "type": "person", "importance": 0.075, "description": "Researchers who established the current state of the art with 88.4% accuracy.", "community": 59}, {"id": "Mahajan et al. (2018)", "type": "person", "importance": 0.075, "description": "Researchers who demonstrated the effectiveness of predicting hashtags on Instagram images.", "community": 60}, {"id": "Kolesnikov et al. (2019)", "type": "person", "importance": 0.0, "description": "Researchers who showed large gains on transfer benchmarks.", "community": 61}, {"id": "Dosovitskiy et al. (2020)", "type": "person", "importance": 0.0, "description": "Researchers who contributed to the understanding of transfer performance.", "community": 62}, {"id": "Hestness et al. (2017)", "type": "person", "importance": 0.0, "description": "Researchers who studied the relationship between compute and transfer performance.", "community": 63}, {"id": "Kaplan et al. (2020)", "type": "person", "importance": 0.0, "description": "Researchers who analyzed the predictability of transfer performance based on compute.", "community": 64}, {"id": "McCann et al. (2017)", "type": "person", "importance": 0.0, "description": "Researchers who discussed improvements in deep contextual representation learning.", "community": 65}, {"id": "WIT", "type": "dataset", "importance": 0.012173733757226562, "description": "WebImageText dataset used for training CLIP, consisting of image-text pairs.", "community": 54}, {"id": "Vision Transformer", "type": "architecture", "importance": 0.01722051862198086, "description": "An architecture used for image encoding, based on transformer models.", "community": 66}, {"id": "EfficientNet", "type": "architecture", "importance": 0.04541076240407216, "description": "A family of convolutional neural networks that optimize accuracy and efficiency.", "community": 67}, {"id": "WebText", "type": "dataset", "importance": 0.10953763007265693, "description": "A dataset used to train the GPT-2 model.", "community": 43}, {"id": "Zhang et al. (2020)", "type": "person", "importance": 0.0, "description": "Researchers who adapted contrastive representation learning for medical imaging.", "community": 68}, {"id": "Oord et al. (2018)", "type": "person", "importance": 0.0, "description": "Researchers who popularized the InfoNCE loss for contrastive representation learning.", "community": 69}, {"id": "Chen et al. (2020)", "type": "person", "importance": 0.0, "description": "Researchers who explored generative models and contrastive models in representation learning.", "community": 70}];
+        const links = [{"source": "Transformer", "target": "Attention Mechanism", "relation": "uses"}, {"source": "Transformer", "target": "BLEU", "relation": "related_to"}, {"source": "Transformer", "target": "WMT 2014 English-to-German", "relation": "trained_on"}, {"source": "Transformer", "target": "WMT 2014 English-to-French", "relation": "trained_on"}, {"source": "Transformer", "target": "Self-Attention", "relation": "uses"}, {"source": "Attention Mechanism", "target": "Attention(Q, K, V)", "relation": "part_of"}, {"source": "Attention Mechanism", "target": "local, restricted attention mechanisms", "relation": "uses"}, {"source": "Attention Mechanism", "target": "Self-Attention", "relation": "uses"}, {"source": "Attention Mechanism", "target": "attention-based models", "relation": "uses"}, {"source": "BLEU", "target": "BLEU Score", "relation": "compared_to"}, {"source": "WMT 2014 English-to-German", "target": "WMT 2014 English-to-French", "relation": "evaluated_on"}, {"source": "WMT 2014 English-to-German", "target": "WMT2014", "relation": "evaluated_on"}, {"source": "WMT 2014 English-to-French", "target": "WMT2014", "relation": "evaluated_on"}, {"source": "Google Brain", "target": "Ashish Vaswani", "relation": "authored_by"}, {"source": "Google Brain", "target": "Noam Shazeer", "relation": "authored_by"}, {"source": "Google Brain", "target": "Niki Parmar", "relation": "authored_by"}, {"source": "Google Brain", "target": "Jakob Uszkoreit", "relation": "authored_by"}, {"source": "Google Brain", "target": "Llion Jones", "relation": "authored_by"}, {"source": "Google Brain", "target": "Aidan N. Gomez", "relation": "authored_by"}, {"source": "Google Brain", "target": "\u0141ukasz Kaiser", "relation": "authored_by"}, {"source": "Google Brain", "target": "Illia Polosukhin", "relation": "authored_by"}, {"source": "Ashish Vaswani", "target": "Niki Parmar", "relation": "authored_by"}, {"source": "Ashish Vaswani", "target": "Illia Polosukhin", "relation": "authored_by"}, {"source": "Noam Shazeer", "target": "Scaled Dot-Product Attention", "relation": "uses"}, {"source": "Niki Parmar", "target": "Illia Polosukhin", "relation": "authored_by"}, {"source": "Aidan N. Gomez", "target": "\u0141ukasz Kaiser", "relation": "authored_by"}, {"source": "Encoder", "target": "Multi-Head Attention", "relation": "uses"}, {"source": "Encoder", "target": "Decoder", "relation": "uses"}, {"source": "Decoder", "target": "Multi-Head Attention", "relation": "uses"}, {"source": "Multi-Head Attention", "target": "Attention Function", "relation": "uses"}, {"source": "Scaled Dot-Product Attention", "target": "Attention Function", "relation": "uses"}, {"source": "Residual Connection", "target": "Encoder", "relation": "uses"}, {"source": "Residual Connection", "target": "Decoder", "relation": "uses"}, {"source": "Layer Normalization", "target": "Encoder", "relation": "uses"}, {"source": "Layer Normalization", "target": "Decoder", "relation": "uses"}, {"source": "Feed-Forward Network", "target": "Encoder", "relation": "uses"}, {"source": "Feed-Forward Network", "target": "Decoder", "relation": "uses"}, {"source": "Softmax Function", "target": "Decoder", "relation": "uses"}, {"source": "Attention Function", "target": "Attention(Q, K, V)", "relation": "part_of"}, {"source": "Attention(Q, K, V)", "target": "local, restricted attention mechanisms", "relation": "uses"}, {"source": "Self-Attention", "target": "Transformer", "relation": "uses"}, {"source": "Convolutional Neural Network (CNN)", "target": "ResNet-50", "relation": "part_of"}, {"source": "Convolutional Neural Network (CNN)", "target": "EfficientNet", "relation": "uses"}, {"source": "Positional Encoding", "target": "Transformer", "relation": "uses"}, {"source": "Positional Encoding", "target": "Positional Encoding", "relation": "uses"}, {"source": "NVIDIA P100 GPU", "target": "P100 GPUs", "relation": "compared_to"}, {"source": "Penn Treebank", "target": "Wall Street Journal", "relation": "evaluated_on"}, {"source": "Vinyals & Kaiser (2014)", "target": "Dyer et al. (2016)", "relation": "authored_by"}, {"source": "Vinyals & Kaiser (2014)", "target": "Zhu et al. (2013)", "relation": "authored_by"}, {"source": "Vinyals & Kaiser (2014)", "target": "Luong et al. (2015)", "relation": "authored_by"}, {"source": "Vinyals & Kaiser (2014)", "target": "McClosky et al. (2006)", "relation": "authored_by"}, {"source": "Vinyals & Kaiser (2014)", "target": "Huang & Harper (2009)", "relation": "authored_by"}, {"source": "Dyer et al. (2016)", "target": "Zhu et al. (2013)", "relation": "authored_by"}, {"source": "Dyer et al. (2016)", "target": "Luong et al. (2015)", "relation": "authored_by"}, {"source": "Dyer et al. (2016)", "target": "McClosky et al. (2006)", "relation": "authored_by"}, {"source": "Dyer et al. (2016)", "target": "Huang & Harper (2009)", "relation": "authored_by"}, {"source": "Zhu et al. (2013)", "target": "Luong et al. (2015)", "relation": "semantically_related"}, {"source": "Zhu et al. (2013)", "target": "Huang & Harper (2009)", "relation": "authored_by"}, {"source": "Zhu et al. (2013)", "target": "McClosky et al. (2006)", "relation": "trained_on"}, {"source": "Huang & Harper (2009)", "target": "Luong et al. (2015)", "relation": "semantically_related"}, {"source": "Huang & Harper (2009)", "target": "McClosky et al. (2006)", "relation": "semantically_related"}, {"source": "McClosky et al. (2006)", "target": "Luong et al. (2015)", "relation": "semantically_related"}, {"source": "attention-based models", "target": "local, restricted attention mechanisms", "relation": "uses"}, {"source": "images", "target": "video", "relation": "applied_to"}, {"source": "images", "target": "Visual Genome", "relation": "evaluated_on"}, {"source": "CLIP", "target": "zero-shot transfer", "relation": "uses"}, {"source": "CLIP", "target": "WIT", "relation": "trained_on"}, {"source": "CLIP", "target": "ImageNet", "relation": "trained_on"}, {"source": "CLIP", "target": "ResNet-50", "relation": "related_to"}, {"source": "CLIP", "target": "YFCC100M", "relation": "trained_on"}, {"source": "GPT-3", "target": "OpenAI", "relation": "related_to"}, {"source": "GPT-3", "target": "WebText", "relation": "trained_on"}, {"source": "ImageNet", "target": "ResNet-50", "relation": "semantically_related"}, {"source": "ResNet-50", "target": "CLIP", "relation": "related_to"}, {"source": "VirTex", "target": "ConVIRT", "relation": "semantically_related"}, {"source": "Dai & Le", "target": "Peters et al.", "relation": "semantically_related"}, {"source": "OpenAI", "target": "CLIP", "relation": "related_to"}, {"source": "OpenAI", "target": "GPT-3", "relation": "related_to"}, {"source": "Kolesnikov et al. (2019)", "target": "Dosovitskiy et al. (2020)", "relation": "authored_by"}, {"source": "Kolesnikov et al. (2019)", "target": "Kaplan et al. (2020)", "relation": "authored_by"}, {"source": "Kolesnikov et al. (2019)", "target": "Hestness et al. (2017)", "relation": "authored_by"}, {"source": "Dosovitskiy et al. (2020)", "target": "Kaplan et al. (2020)", "relation": "authored_by"}, {"source": "Dosovitskiy et al. (2020)", "target": "Hestness et al. (2017)", "relation": "authored_by"}, {"source": "Hestness et al. (2017)", "target": "Kaplan et al. (2020)", "relation": "authored_by"}, {"source": "McCann et al. (2017)", "target": "Chen et al. (2020)", "relation": "authored_by"}, {"source": "McCann et al. (2017)", "target": "Oord et al. (2018)", "relation": "authored_by"}, {"source": "McCann et al. (2017)", "target": "Zhang et al. (2020)", "relation": "authored_by"}, {"source": "WIT", "target": "WebText", "relation": "evaluated_on"}, {"source": "Zhang et al. (2020)", "target": "Chen et al. (2020)", "relation": "authored_by"}, {"source": "Zhang et al. (2020)", "target": "Oord et al. (2018)", "relation": "authored_by"}, {"source": "Oord et al. (2018)", "target": "Chen et al. (2020)", "relation": "authored_by"}];
+        const types = ["hardware", "architecture", "training method", "method", "Function", "person", "resource", "Method", "organization", "data type", "publication", "people", "metric", "dataset", "task", "architecture component", "Architecture", "Metric", "model"];
+        
+        const container = document.getElementById('graph-container');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        
+        const svg = d3.select('#graph-container')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
+        
+        const g = svg.append('g');
+        
+        // Zoom behavior
+        svg.call(d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on('zoom', (event) => g.attr('transform', event.transform)));
+        
+        const simulation = d3.forceSimulation(nodes)
+            .force('link', d3.forceLink(links).id(d => d.id).distance(80))
+            .force('charge', d3.forceManyBody().strength(-200))
+            .force('center', d3.forceCenter(width / 2, height / 2))
+            .force('collision', d3.forceCollide().radius(30));
+        
+        const colorScale = (type) => {
+            const idx = types.indexOf(type);
+            return `hsl(${idx * 360 / types.length}, 70%, 60%)`;
+        };
+        
+        const link = g.selectAll('.link')
+            .data(links)
+            .join('line')
+            .attr('stroke', 'rgba(255,255,255,0.15)')
+            .attr('stroke-width', 1);
+        
+        const node = g.selectAll('.node')
+            .data(nodes)
+            .join('g')
+            .attr('class', 'node')
+            .call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+        
+        node.append('circle')
+            .attr('r', d => 6 + d.importance * 20)
+            .attr('fill', d => colorScale(d.type))
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 1.5)
+            .on('mouseover', function(event, d) {
+                const tooltip = document.getElementById('tooltip');
+                tooltip.innerHTML = `
+                    <h3>${d.id}</h3>
+                    <p><span class="type-badge">${d.type}</span></p>
+                    <p><strong>Importance:</strong> ${d.importance.toFixed(3)}</p>
+                    <p>${d.description}</p>
+                `;
+                tooltip.style.opacity = 1;
+                tooltip.style.left = (event.pageX + 15) + 'px';
+                tooltip.style.top = (event.pageY - 10) + 'px';
+            })
+            .on('mouseout', function() {
+                document.getElementById('tooltip').style.opacity = 0;
+            });
+        
+        node.append('text')
+            .text(d => d.id.length > 12 ? d.id.substring(0, 12) + '...' : d.id)
+            .attr('text-anchor', 'middle')
+            .attr('dy', d => 12 + d.importance * 20)
+            .attr('fill', '#c0c0c0')
+            .attr('font-size', '9px');
+        
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+            node.attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+        
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const type = this.dataset.type;
+                node.style('opacity', d => type === 'all' || d.type === type ? 1 : 0.1);
+                link.style('opacity', d => type === 'all' || 
+                    (nodes.find(n => n.id === d.source.id)?.type === type) || 
+                    (nodes.find(n => n.id === d.target.id)?.type === type) ? 0.6 : 0.05);
+            });
+        });
+        
+        function dragstarted(event) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            event.subject.fx = event.subject.x;
+            event.subject.fy = event.subject.y;
+        }
+        function dragged(event) {
+            event.subject.fx = event.x;
+            event.subject.fy = event.y;
+        }
+        function dragended(event) {
+            if (!event.active) simulation.alphaTarget(0);
+            event.subject.fx = null;
+            event.subject.fy = null;
+        }
+    </script>
+</body>
+</html>
